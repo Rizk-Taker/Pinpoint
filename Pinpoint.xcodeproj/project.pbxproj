@@ -146,56 +146,13 @@
 		BC5E478F1AB37F1C00234862 /* Pinpoint */ = {
 			isa = PBXGroup;
 			children = (
+				BCF873751AB78DF300BC13DB /* Yelp */,
+				BCF873741AB78DE100BC13DB /* Foursquare */,
 				BCF873731AB78A8F00BC13DB /* Magic */,
 				BC5E47941AB37F1C00234862 /* AppDelegate.h */,
 				BC5E47951AB37F1C00234862 /* AppDelegate.m */,
 				BC5E47971AB37F1C00234862 /* ViewController.h */,
 				BC5E47981AB37F1C00234862 /* ViewController.m */,
-				BC5E47B61AB37F3400234862 /* FourSquareDataStore.h */,
-				BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */,
-				BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */,
-				BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */,
-				BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */,
-				BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */,
-				BCF873381AB7767300BC13DB /* YPAPISample.h */,
-				BCF873391AB7767300BC13DB /* YPAPISample.m */,
-				BCF8733C1AB7768100BC13DB /* OACall.h */,
-				BCF8733D1AB7768200BC13DB /* OACall.m */,
-				BCF8733E1AB7768200BC13DB /* OAConsumer.h */,
-				BCF8733F1AB7768200BC13DB /* OAConsumer.m */,
-				BCF873401AB7768200BC13DB /* OADataFetcher.h */,
-				BCF873411AB7768200BC13DB /* OADataFetcher.m */,
-				BCF873421AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.h */,
-				BCF873431AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.m */,
-				BCF873441AB7768200BC13DB /* OAMutableURLRequest.h */,
-				BCF873451AB7768200BC13DB /* OAMutableURLRequest.m */,
-				BCF873461AB7768200BC13DB /* OAPlaintextSignatureProvider.h */,
-				BCF873471AB7768200BC13DB /* OAPlaintextSignatureProvider.m */,
-				BCF873481AB7768200BC13DB /* OAProblem.h */,
-				BCF873491AB7768200BC13DB /* OAProblem.m */,
-				BCF8734A1AB7768200BC13DB /* OARequestParameter.h */,
-				BCF8734B1AB7768200BC13DB /* OARequestParameter.m */,
-				BCF8734C1AB7768200BC13DB /* OAServiceTicket.h */,
-				BCF8734D1AB7768200BC13DB /* OAServiceTicket.m */,
-				BCF8734E1AB7768200BC13DB /* OASignatureProviding.h */,
-				BCF8734F1AB7768200BC13DB /* OAToken.h */,
-				BCF873501AB7768200BC13DB /* OAToken.m */,
-				BCF873511AB7768200BC13DB /* OATokenManager.h */,
-				BCF873521AB7768200BC13DB /* OATokenManager.m */,
-				BCF873531AB7768200BC13DB /* OAuthConsumer.h */,
-				BCF8735F1AB776A200BC13DB /* Base64Transcoder.c */,
-				BCF873601AB776A200BC13DB /* Base64Transcoder.h */,
-				BCF873681AB776AD00BC13DB /* NSMutableURLRequest+Parameters.h */,
-				BCF873691AB776AD00BC13DB /* NSMutableURLRequest+Parameters.m */,
-				BCF8736A1AB776AD00BC13DB /* NSString+URLEncoding.h */,
-				BCF8736B1AB776AD00BC13DB /* NSString+URLEncoding.m */,
-				BCF8736C1AB776AD00BC13DB /* NSURL+Base.h */,
-				BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */,
-				BCF873611AB776A200BC13DB /* hmac.c */,
-				BCF873621AB776A200BC13DB /* hmac.h */,
-				BCF873631AB776A200BC13DB /* sha1.c */,
-				BCF873641AB776A200BC13DB /* sha1.h */,
-				BCF873711AB7895F00BC13DB /* main.m */,
 				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
 				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
 				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
@@ -232,8 +189,67 @@
 		BCF873731AB78A8F00BC13DB /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				BCF8733C1AB7768100BC13DB /* OACall.h */,
+				BCF8733D1AB7768200BC13DB /* OACall.m */,
+				BCF8733E1AB7768200BC13DB /* OAConsumer.h */,
+				BCF8733F1AB7768200BC13DB /* OAConsumer.m */,
+				BCF873401AB7768200BC13DB /* OADataFetcher.h */,
+				BCF873411AB7768200BC13DB /* OADataFetcher.m */,
+				BCF873421AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.h */,
+				BCF873431AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.m */,
+				BCF873441AB7768200BC13DB /* OAMutableURLRequest.h */,
+				BCF873451AB7768200BC13DB /* OAMutableURLRequest.m */,
+				BCF873461AB7768200BC13DB /* OAPlaintextSignatureProvider.h */,
+				BCF873471AB7768200BC13DB /* OAPlaintextSignatureProvider.m */,
+				BCF873481AB7768200BC13DB /* OAProblem.h */,
+				BCF873491AB7768200BC13DB /* OAProblem.m */,
+				BCF8734A1AB7768200BC13DB /* OARequestParameter.h */,
+				BCF8734B1AB7768200BC13DB /* OARequestParameter.m */,
+				BCF8734C1AB7768200BC13DB /* OAServiceTicket.h */,
+				BCF8734D1AB7768200BC13DB /* OAServiceTicket.m */,
+				BCF8734E1AB7768200BC13DB /* OASignatureProviding.h */,
+				BCF8734F1AB7768200BC13DB /* OAToken.h */,
+				BCF873501AB7768200BC13DB /* OAToken.m */,
+				BCF873511AB7768200BC13DB /* OATokenManager.h */,
+				BCF873521AB7768200BC13DB /* OATokenManager.m */,
+				BCF873531AB7768200BC13DB /* OAuthConsumer.h */,
+				BCF8735F1AB776A200BC13DB /* Base64Transcoder.c */,
+				BCF873601AB776A200BC13DB /* Base64Transcoder.h */,
+				BCF873681AB776AD00BC13DB /* NSMutableURLRequest+Parameters.h */,
+				BCF873691AB776AD00BC13DB /* NSMutableURLRequest+Parameters.m */,
+				BCF8736A1AB776AD00BC13DB /* NSString+URLEncoding.h */,
+				BCF8736B1AB776AD00BC13DB /* NSString+URLEncoding.m */,
+				BCF8736C1AB776AD00BC13DB /* NSURL+Base.h */,
+				BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */,
+				BCF873611AB776A200BC13DB /* hmac.c */,
+				BCF873621AB776A200BC13DB /* hmac.h */,
+				BCF873631AB776A200BC13DB /* sha1.c */,
+				BCF873641AB776A200BC13DB /* sha1.h */,
 			);
 			name = Magic;
+			sourceTree = "<group>";
+		};
+		BCF873741AB78DE100BC13DB /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E47B61AB37F3400234862 /* FourSquareDataStore.h */,
+				BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */,
+				BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */,
+				BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */,
+			);
+			name = Foursquare;
+			sourceTree = "<group>";
+		};
+		BCF873751AB78DF300BC13DB /* Yelp */ = {
+			isa = PBXGroup;
+			children = (
+				BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */,
+				BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */,
+				BCF873381AB7767300BC13DB /* YPAPISample.h */,
+				BCF873391AB7767300BC13DB /* YPAPISample.m */,
+				BCF873711AB7895F00BC13DB /* main.m */,
+			);
+			name = Yelp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
