@@ -7,14 +7,17 @@
 //
 
 #import "ViewController.h"
-#import "FourSquareAPIClient.h"
-#import "FourSquareDataStore.h"
+//#import "FourSquareAPIClient.h"
+#import "PinpointDataStore.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 
 @property (strong, nonatomic) NSArray *results;
-@property (strong, nonatomic) FourSquareDataStore *fourSquareDataStore;
+@property (strong, nonatomic) PinpointDataStore *pinPointDataStore;
+
 @end
 
 @implementation ViewController
@@ -25,21 +28,25 @@
     
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
+    self.locationTextField.delegate = self;
+    self.searchTextField.delegate = self;
     
-    self.fourSquareDataStore = [FourSquareDataStore sharedDataStore];
+    self.pinPointDataStore = [PinpointDataStore sharedDataStore];
     
-    [self.fourSquareDataStore getFourSquareDataWithCompletionHandler:^void(NSArray *fourSquareArray) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            self.fourSquareResults = fourSquareArray;
-            [self.myTableView reloadData];
-        }];
-        [self.view layoutIfNeeded];
+    [self.pinPointDataStore combineYelpandFoursquareResultsWithTerm:@"term" Location:@"location" CompletionHandler:^(NSArray *pinPointArray) {
+        [self.myTableView reloadData];
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"%@",self.locationTextField.text);
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }

@@ -15,6 +15,7 @@
 		BC5E47AD1AB37F1C00234862 /* PinpointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47AC1AB37F1C00234862 /* PinpointTests.m */; };
 		BC5E47BA1AB37F3400234862 /* FourSquareDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */; };
 		BC5E47BB1AB37F3400234862 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */; };
+		BCC75FC81AB8674000923ED8 /* PinpointDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */; };
 		BCF8733A1AB7767300BC13DB /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */; };
 		BCF8733B1AB7767300BC13DB /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873391AB7767300BC13DB /* YPAPISample.m */; };
 		BCF873541AB7768200BC13DB /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8733D1AB7768200BC13DB /* OACall.m */; };
@@ -35,6 +36,7 @@
 		BCF8736F1AB776AD00BC13DB /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8736B1AB776AD00BC13DB /* NSString+URLEncoding.m */; };
 		BCF873701AB776AD00BC13DB /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */; };
 		BCF873721AB7895F00BC13DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873711AB7895F00BC13DB /* main.m */; };
+		BCF873781AB78FAE00BC13DB /* YelpDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873771AB78FAE00BC13DB /* YelpDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareDataStore.m; sourceTree = "<group>"; };
 		BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIClient.h; sourceTree = "<group>"; };
 		BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIClient.m; sourceTree = "<group>"; };
+		BCC75FC61AB8674000923ED8 /* PinpointDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinpointDataStore.h; sourceTree = "<group>"; };
+		BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinpointDataStore.m; sourceTree = "<group>"; };
 		BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		BCF873381AB7767300BC13DB /* YPAPISample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAPISample.h; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		BCF8736C1AB776AD00BC13DB /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
 		BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
 		BCF873711AB7895F00BC13DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCF873761AB78FAE00BC13DB /* YelpDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpDataStore.h; sourceTree = "<group>"; };
+		BCF873771AB78FAE00BC13DB /* YelpDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpDataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,16 +152,19 @@
 		BC5E478F1AB37F1C00234862 /* Pinpoint */ = {
 			isa = PBXGroup;
 			children = (
-				BCF873751AB78DF300BC13DB /* Yelp */,
-				BCF873741AB78DE100BC13DB /* Foursquare */,
-				BCF873731AB78A8F00BC13DB /* Magic */,
 				BC5E47941AB37F1C00234862 /* AppDelegate.h */,
 				BC5E47951AB37F1C00234862 /* AppDelegate.m */,
+				BCF873751AB78DF300BC13DB /* Yelp */,
+				BCF873741AB78DE100BC13DB /* Foursquare */,
+				BCC75FC61AB8674000923ED8 /* PinpointDataStore.h */,
+				BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */,
 				BC5E47971AB37F1C00234862 /* ViewController.h */,
 				BC5E47981AB37F1C00234862 /* ViewController.m */,
 				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
 				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
 				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
+				BCF873711AB7895F00BC13DB /* main.m */,
+				BCF873731AB78A8F00BC13DB /* Magic */,
 				BC5E47901AB37F1C00234862 /* Supporting Files */,
 			);
 			path = Pinpoint;
@@ -247,7 +256,8 @@
 				BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */,
 				BCF873381AB7767300BC13DB /* YPAPISample.h */,
 				BCF873391AB7767300BC13DB /* YPAPISample.m */,
-				BCF873711AB7895F00BC13DB /* main.m */,
+				BCF873761AB78FAE00BC13DB /* YelpDataStore.h */,
+				BCF873771AB78FAE00BC13DB /* YelpDataStore.m */,
 			);
 			name = Yelp;
 			sourceTree = "<group>";
@@ -356,7 +366,9 @@
 				BC5E47BB1AB37F3400234862 /* FourSquareAPIClient.m in Sources */,
 				BCF8735C1AB7768200BC13DB /* OAServiceTicket.m in Sources */,
 				BC5E47BA1AB37F3400234862 /* FourSquareDataStore.m in Sources */,
+				BCF873781AB78FAE00BC13DB /* YelpDataStore.m in Sources */,
 				BCF873571AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				BCC75FC81AB8674000923ED8 /* PinpointDataStore.m in Sources */,
 				BCF8733B1AB7767300BC13DB /* YPAPISample.m in Sources */,
 				BCF8736E1AB776AD00BC13DB /* NSMutableURLRequest+Parameters.m in Sources */,
 				BCF8735B1AB7768200BC13DB /* OARequestParameter.m in Sources */,

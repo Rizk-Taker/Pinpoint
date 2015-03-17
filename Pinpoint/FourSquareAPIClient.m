@@ -30,7 +30,6 @@
         for (NSDictionary *venue in venuesArray) {
             [venueNames addObject:venue[@"name"]];
         }
-        NSLog(@"TOTAL INFO FROM EACH DICTIONARY %@",venuesArray[0]);
         
         completionBlock(venueNames);
         

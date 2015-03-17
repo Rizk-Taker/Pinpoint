@@ -18,7 +18,6 @@
     [client getNamesOfAllFoursquareVenuesNearZipCode:@10004 CompletionHandler:^(NSArray *venueNames) {
         
         completionBlock(venueNames);
-        NSLog(@"The Foursquare Venues are: %@",venueNames);
         
     }];
 }
