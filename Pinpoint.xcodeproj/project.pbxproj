@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34BEBD031DF5A8276805604B /* libPods-Pinpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34D2AC13F3EBEDC7FC6B07 /* libPods-Pinpoint.a */; };
 		BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47951AB37F1C00234862 /* AppDelegate.m */; };
-		BC5E47991AB37F1C00234862 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47981AB37F1C00234862 /* ViewController.m */; };
+		BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47981AB37F1C00234862 /* SearchInputViewController.m */; };
 		BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479A1AB37F1C00234862 /* Main.storyboard */; };
 		BC5E479E1AB37F1C00234862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479D1AB37F1C00234862 /* Images.xcassets */; };
 		BC5E47A11AB37F1C00234862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */; };
 		BC5E47AD1AB37F1C00234862 /* PinpointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47AC1AB37F1C00234862 /* PinpointTests.m */; };
-		BC5E47BA1AB37F3400234862 /* FourSquareDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */; };
 		BC5E47BB1AB37F3400234862 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */; };
-		BCC75FC81AB8674000923ED8 /* PinpointDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */; };
+		BCC75FCE1AB8F9A500923ED8 /* Yelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FCD1AB8F9A500923ED8 /* Yelpers.m */; };
+		BCC75FD11AB8F9B400923ED8 /* FourSquares.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD01AB8F9B400923ED8 /* FourSquares.m */; };
+		BCC75FD51AB9073600923ED8 /* GooglePlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD41AB9073600923ED8 /* GooglePlaces.m */; };
+		BCC75FD81AB9075400923ED8 /* GoogleAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */; };
+		BCC75FE11AB9F2E000923ED8 /* AggregateDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FE01AB9F2E000923ED8 /* AggregateDataStore.m */; };
+		BCC75FE41AB9F43200923ED8 /* PinpointComparisonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FE31AB9F43200923ED8 /* PinpointComparisonHelper.m */; };
+		BCC75FEF1ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FE81ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m */; };
+		BCC75FF01ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FEA1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.m */; };
+		BCC75FF11ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FEC1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m */; };
+		BCC75FF21ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FEE1ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m */; };
+		BCC75FF51ABB66D500923ED8 /* SuggestedLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FF41ABB66D500923ED8 /* SuggestedLocationsViewController.m */; };
+		BCC75FFC1ABB688400923ED8 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FFB1ABB688400923ED8 /* ResultsViewController.m */; };
+		BCC75FFF1ABB68B700923ED8 /* ResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FFE1ABB68B700923ED8 /* ResultDetailViewController.m */; };
 		BCF8733A1AB7767300BC13DB /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */; };
-		BCF8733B1AB7767300BC13DB /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873391AB7767300BC13DB /* YPAPISample.m */; };
+		BCF8733B1AB7767300BC13DB /* YelpAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873391AB7767300BC13DB /* YelpAPIClient.m */; };
 		BCF873541AB7768200BC13DB /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8733D1AB7768200BC13DB /* OACall.m */; };
 		BCF873551AB7768200BC13DB /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8733F1AB7768200BC13DB /* OAConsumer.m */; };
 		BCF873561AB7768200BC13DB /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873411AB7768200BC13DB /* OADataFetcher.m */; };
@@ -36,7 +48,6 @@
 		BCF8736F1AB776AD00BC13DB /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8736B1AB776AD00BC13DB /* NSString+URLEncoding.m */; };
 		BCF873701AB776AD00BC13DB /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */; };
 		BCF873721AB7895F00BC13DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873711AB7895F00BC13DB /* main.m */; };
-		BCF873781AB78FAE00BC13DB /* YelpDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873771AB78FAE00BC13DB /* YelpDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,28 +61,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C69A35E75EFB18093D98152 /* Pods-Pinpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.debug.xcconfig"; sourceTree = "<group>"; };
+		494D8F7C31F9037035B15582 /* Pods-Pinpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.release.xcconfig"; sourceTree = "<group>"; };
 		BC5E478D1AB37F1C00234862 /* Pinpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5E47911AB37F1C00234862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5E47941AB37F1C00234862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC5E47951AB37F1C00234862 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BC5E47971AB37F1C00234862 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BC5E47981AB37F1C00234862 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC5E47971AB37F1C00234862 /* SearchInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchInputViewController.h; sourceTree = "<group>"; };
+		BC5E47981AB37F1C00234862 /* SearchInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchInputViewController.m; sourceTree = "<group>"; };
 		BC5E479B1AB37F1C00234862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC5E479D1AB37F1C00234862 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC5E47A01AB37F1C00234862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BC5E47A61AB37F1C00234862 /* PinpointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinpointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5E47AB1AB37F1C00234862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5E47AC1AB37F1C00234862 /* PinpointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinpointTests.m; sourceTree = "<group>"; };
-		BC5E47B61AB37F3400234862 /* FourSquareDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareDataStore.h; sourceTree = "<group>"; };
-		BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareDataStore.m; sourceTree = "<group>"; };
 		BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIClient.h; sourceTree = "<group>"; };
 		BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIClient.m; sourceTree = "<group>"; };
-		BCC75FC61AB8674000923ED8 /* PinpointDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinpointDataStore.h; sourceTree = "<group>"; };
-		BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinpointDataStore.m; sourceTree = "<group>"; };
+		BCC75FCC1AB8F9A500923ED8 /* Yelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yelpers.h; sourceTree = "<group>"; };
+		BCC75FCD1AB8F9A500923ED8 /* Yelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yelpers.m; sourceTree = "<group>"; };
+		BCC75FCF1AB8F9B400923ED8 /* FourSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquares.h; sourceTree = "<group>"; };
+		BCC75FD01AB8F9B400923ED8 /* FourSquares.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquares.m; sourceTree = "<group>"; };
+		BCC75FD31AB9073600923ED8 /* GooglePlaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlaces.h; sourceTree = "<group>"; };
+		BCC75FD41AB9073600923ED8 /* GooglePlaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlaces.m; sourceTree = "<group>"; };
+		BCC75FD61AB9075400923ED8 /* GoogleAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAPIClient.h; sourceTree = "<group>"; };
+		BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAPIClient.m; sourceTree = "<group>"; };
+		BCC75FDF1AB9F2E000923ED8 /* AggregateDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AggregateDataStore.h; sourceTree = "<group>"; };
+		BCC75FE01AB9F2E000923ED8 /* AggregateDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AggregateDataStore.m; sourceTree = "<group>"; };
+		BCC75FE21AB9F43200923ED8 /* PinpointComparisonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinpointComparisonHelper.h; sourceTree = "<group>"; };
+		BCC75FE31AB9F43200923ED8 /* PinpointComparisonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinpointComparisonHelper.m; sourceTree = "<group>"; };
+		BCC75FE61ABB4F1900923ED8 /* SPGooglePlacesAutocomplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGooglePlacesAutocomplete.h; sourceTree = "<group>"; };
+		BCC75FE71ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGooglePlacesAutocompletePlace.h; sourceTree = "<group>"; };
+		BCC75FE81ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGooglePlacesAutocompletePlace.m; sourceTree = "<group>"; };
+		BCC75FE91ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGooglePlacesAutocompleteQuery.h; sourceTree = "<group>"; };
+		BCC75FEA1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGooglePlacesAutocompleteQuery.m; sourceTree = "<group>"; };
+		BCC75FEB1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGooglePlacesAutocompleteUtilities.h; sourceTree = "<group>"; };
+		BCC75FEC1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGooglePlacesAutocompleteUtilities.m; sourceTree = "<group>"; };
+		BCC75FED1ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGooglePlacesPlaceDetailQuery.h; sourceTree = "<group>"; };
+		BCC75FEE1ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGooglePlacesPlaceDetailQuery.m; sourceTree = "<group>"; };
+		BCC75FF31ABB66D500923ED8 /* SuggestedLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedLocationsViewController.h; sourceTree = "<group>"; };
+		BCC75FF41ABB66D500923ED8 /* SuggestedLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedLocationsViewController.m; sourceTree = "<group>"; };
+		BCC75FFA1ABB688400923ED8 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		BCC75FFB1ABB688400923ED8 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		BCC75FFD1ABB68B700923ED8 /* ResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultDetailViewController.h; sourceTree = "<group>"; };
+		BCC75FFE1ABB68B700923ED8 /* ResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultDetailViewController.m; sourceTree = "<group>"; };
 		BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
-		BCF873381AB7767300BC13DB /* YPAPISample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAPISample.h; sourceTree = "<group>"; };
-		BCF873391AB7767300BC13DB /* YPAPISample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAPISample.m; sourceTree = "<group>"; };
+		BCF873381AB7767300BC13DB /* YelpAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIClient.h; sourceTree = "<group>"; };
+		BCF873391AB7767300BC13DB /* YelpAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIClient.m; sourceTree = "<group>"; };
 		BCF8733C1AB7768100BC13DB /* OACall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACall.h; sourceTree = "<group>"; };
 		BCF8733D1AB7768200BC13DB /* OACall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACall.m; sourceTree = "<group>"; };
 		BCF8733E1AB7768200BC13DB /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
@@ -109,8 +145,7 @@
 		BCF8736C1AB776AD00BC13DB /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
 		BCF8736D1AB776AD00BC13DB /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
 		BCF873711AB7895F00BC13DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BCF873761AB78FAE00BC13DB /* YelpDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpDataStore.h; sourceTree = "<group>"; };
-		BCF873771AB78FAE00BC13DB /* YelpDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpDataStore.m; sourceTree = "<group>"; };
+		ED34D2AC13F3EBEDC7FC6B07 /* libPods-Pinpoint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pinpoint.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BEBD031DF5A8276805604B /* libPods-Pinpoint.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +167,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15743AC7F4E707F057D061EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED34D2AC13F3EBEDC7FC6B07 /* libPods-Pinpoint.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53C5DB76B941DC91619DE34E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C69A35E75EFB18093D98152 /* Pods-Pinpoint.debug.xcconfig */,
+				494D8F7C31F9037035B15582 /* Pods-Pinpoint.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC5E47841AB37F1C00234862 = {
 			isa = PBXGroup;
 			children = (
 				BC5E478F1AB37F1C00234862 /* Pinpoint */,
 				BC5E47A91AB37F1C00234862 /* PinpointTests */,
 				BC5E478E1AB37F1C00234862 /* Products */,
+				53C5DB76B941DC91619DE34E /* Pods */,
+				15743AC7F4E707F057D061EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,17 +209,13 @@
 			children = (
 				BC5E47941AB37F1C00234862 /* AppDelegate.h */,
 				BC5E47951AB37F1C00234862 /* AppDelegate.m */,
-				BCF873751AB78DF300BC13DB /* Yelp */,
-				BCF873741AB78DE100BC13DB /* Foursquare */,
-				BCC75FC61AB8674000923ED8 /* PinpointDataStore.h */,
-				BCC75FC71AB8674000923ED8 /* PinpointDataStore.m */,
-				BC5E47971AB37F1C00234862 /* ViewController.h */,
-				BC5E47981AB37F1C00234862 /* ViewController.m */,
-				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
-				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
-				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
-				BCF873711AB7895F00BC13DB /* main.m */,
+				BCC75FF81ABB678700923ED8 /* Views */,
+				BCC75FF71ABB677800923ED8 /* Models */,
+				BCC75FF61ABB66D900923ED8 /* Controllers */,
+				BCC75FF91ABB67FE00923ED8 /* Helpers */,
 				BCF873731AB78A8F00BC13DB /* Magic */,
+				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
+				BCF873711AB7895F00BC13DB /* main.m */,
 				BC5E47901AB37F1C00234862 /* Supporting Files */,
 			);
 			path = Pinpoint;
@@ -193,6 +244,79 @@
 				BC5E47AB1AB37F1C00234862 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCC75FD21AB9072300923ED8 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				BCC75FE51ABB4EFF00923ED8 /* GoogleAutoComplete */,
+				BCC75FD31AB9073600923ED8 /* GooglePlaces.h */,
+				BCC75FD41AB9073600923ED8 /* GooglePlaces.m */,
+				BCC75FD61AB9075400923ED8 /* GoogleAPIClient.h */,
+				BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */,
+			);
+			name = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		BCC75FE51ABB4EFF00923ED8 /* GoogleAutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				BCC75FE61ABB4F1900923ED8 /* SPGooglePlacesAutocomplete.h */,
+				BCC75FE71ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.h */,
+				BCC75FE81ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m */,
+				BCC75FE91ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.h */,
+				BCC75FEA1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.m */,
+				BCC75FEB1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.h */,
+				BCC75FEC1ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m */,
+				BCC75FED1ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.h */,
+				BCC75FEE1ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m */,
+			);
+			name = GoogleAutoComplete;
+			sourceTree = "<group>";
+		};
+		BCC75FF61ABB66D900923ED8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E47971AB37F1C00234862 /* SearchInputViewController.h */,
+				BC5E47981AB37F1C00234862 /* SearchInputViewController.m */,
+				BCC75FF31ABB66D500923ED8 /* SuggestedLocationsViewController.h */,
+				BCC75FF41ABB66D500923ED8 /* SuggestedLocationsViewController.m */,
+				BCC75FFA1ABB688400923ED8 /* ResultsViewController.h */,
+				BCC75FFB1ABB688400923ED8 /* ResultsViewController.m */,
+				BCC75FFD1ABB68B700923ED8 /* ResultDetailViewController.h */,
+				BCC75FFE1ABB68B700923ED8 /* ResultDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BCC75FF71ABB677800923ED8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCF873741AB78DE100BC13DB /* Foursquare */,
+				BCF873751AB78DF300BC13DB /* Yelp */,
+				BCC75FD21AB9072300923ED8 /* GooglePlaces */,
+				BCC75FDF1AB9F2E000923ED8 /* AggregateDataStore.h */,
+				BCC75FE01AB9F2E000923ED8 /* AggregateDataStore.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BCC75FF81ABB678700923ED8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
+				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BCC75FF91ABB67FE00923ED8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCC75FE21AB9F43200923ED8 /* PinpointComparisonHelper.h */,
+				BCC75FE31AB9F43200923ED8 /* PinpointComparisonHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		BCF873731AB78A8F00BC13DB /* Magic */ = {
@@ -241,8 +365,8 @@
 		BCF873741AB78DE100BC13DB /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
-				BC5E47B61AB37F3400234862 /* FourSquareDataStore.h */,
-				BC5E47B71AB37F3400234862 /* FourSquareDataStore.m */,
+				BCC75FCF1AB8F9B400923ED8 /* FourSquares.h */,
+				BCC75FD01AB8F9B400923ED8 /* FourSquares.m */,
 				BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */,
 				BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */,
 			);
@@ -252,12 +376,12 @@
 		BCF873751AB78DF300BC13DB /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
+				BCC75FCC1AB8F9A500923ED8 /* Yelpers.h */,
+				BCC75FCD1AB8F9A500923ED8 /* Yelpers.m */,
 				BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */,
 				BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */,
-				BCF873381AB7767300BC13DB /* YPAPISample.h */,
-				BCF873391AB7767300BC13DB /* YPAPISample.m */,
-				BCF873761AB78FAE00BC13DB /* YelpDataStore.h */,
-				BCF873771AB78FAE00BC13DB /* YelpDataStore.m */,
+				BCF873381AB7767300BC13DB /* YelpAPIClient.h */,
+				BCF873391AB7767300BC13DB /* YelpAPIClient.m */,
 			);
 			name = Yelp;
 			sourceTree = "<group>";
@@ -269,9 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5E47B01AB37F1C00234862 /* Build configuration list for PBXNativeTarget "Pinpoint" */;
 			buildPhases = (
+				BDF5D6BE1708C8F3AD74257E /* Check Pods Manifest.lock */,
 				BC5E47891AB37F1C00234862 /* Sources */,
 				BC5E478A1AB37F1C00234862 /* Frameworks */,
 				BC5E478B1AB37F1C00234862 /* Resources */,
+				15BD52964BAB9DEC903E676A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +483,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15BD52964BAB9DEC903E676A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF5D6BE1708C8F3AD74257E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC5E47891AB37F1C00234862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -365,20 +524,26 @@
 				BCF873661AB776A200BC13DB /* hmac.c in Sources */,
 				BC5E47BB1AB37F3400234862 /* FourSquareAPIClient.m in Sources */,
 				BCF8735C1AB7768200BC13DB /* OAServiceTicket.m in Sources */,
-				BC5E47BA1AB37F3400234862 /* FourSquareDataStore.m in Sources */,
-				BCF873781AB78FAE00BC13DB /* YelpDataStore.m in Sources */,
+				BCC75FF51ABB66D500923ED8 /* SuggestedLocationsViewController.m in Sources */,
 				BCF873571AB7768200BC13DB /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				BCC75FC81AB8674000923ED8 /* PinpointDataStore.m in Sources */,
-				BCF8733B1AB7767300BC13DB /* YPAPISample.m in Sources */,
+				BCC75FE41AB9F43200923ED8 /* PinpointComparisonHelper.m in Sources */,
+				BCF8733B1AB7767300BC13DB /* YelpAPIClient.m in Sources */,
 				BCF8736E1AB776AD00BC13DB /* NSMutableURLRequest+Parameters.m in Sources */,
 				BCF8735B1AB7768200BC13DB /* OARequestParameter.m in Sources */,
-				BC5E47991AB37F1C00234862 /* ViewController.m in Sources */,
+				BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */,
 				BCF873651AB776A200BC13DB /* Base64Transcoder.c in Sources */,
+				BCC75FD11AB8F9B400923ED8 /* FourSquares.m in Sources */,
+				BCC75FD51AB9073600923ED8 /* GooglePlaces.m in Sources */,
 				BCF8735A1AB7768200BC13DB /* OAProblem.m in Sources */,
+				BCC75FFC1ABB688400923ED8 /* ResultsViewController.m in Sources */,
 				BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */,
+				BCC75FE11AB9F2E000923ED8 /* AggregateDataStore.m in Sources */,
 				BCF8735D1AB7768200BC13DB /* OAToken.m in Sources */,
 				BCF873591AB7768200BC13DB /* OAPlaintextSignatureProvider.m in Sources */,
+				BCC75FEF1ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m in Sources */,
 				BCF873581AB7768200BC13DB /* OAMutableURLRequest.m in Sources */,
+				BCC75FF01ABB4F1900923ED8 /* SPGooglePlacesAutocompleteQuery.m in Sources */,
+				BCC75FFF1ABB68B700923ED8 /* ResultDetailViewController.m in Sources */,
 				BCF8733A1AB7767300BC13DB /* NSURLRequest+OAuth.m in Sources */,
 				BCF873551AB7768200BC13DB /* OAConsumer.m in Sources */,
 				BCF873701AB776AD00BC13DB /* NSURL+Base.m in Sources */,
@@ -387,6 +552,10 @@
 				BCF8736F1AB776AD00BC13DB /* NSString+URLEncoding.m in Sources */,
 				BCF873541AB7768200BC13DB /* OACall.m in Sources */,
 				BCF873721AB7895F00BC13DB /* main.m in Sources */,
+				BCC75FF11ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m in Sources */,
+				BCC75FF21ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m in Sources */,
+				BCC75FCE1AB8F9A500923ED8 /* Yelpers.m in Sources */,
+				BCC75FD81AB9075400923ED8 /* GoogleAPIClient.m in Sources */,
 				BCF873561AB7768200BC13DB /* OADataFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +678,7 @@
 		};
 		BC5E47B11AB37F1C00234862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C69A35E75EFB18093D98152 /* Pods-Pinpoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pinpoint/Info.plist;
@@ -519,6 +689,7 @@
 		};
 		BC5E47B21AB37F1C00234862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494D8F7C31F9037035B15582 /* Pods-Pinpoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pinpoint/Info.plist;

@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
-#import "YPAPISample.h"
+#import "YelpAPIClient.h"
 
 /**
 

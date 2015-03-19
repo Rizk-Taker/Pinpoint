@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface FourSquareAPIClient : NSObject
+-(void)getNamesOfAllFoursquareVenuesWithTerm: (NSString *)term
+                                   Latitiude:(NSString *)latitude
+                                   Longitude:(NSString *)longitude
+                           CompletionHandler:(void (^)(NSArray *venueNames))completionBlock;
 
--(void)getNamesOfAllFoursquareVenuesNearZipCode:(NSNumber *)zipCode
-                              CompletionHandler:(void (^)(NSArray *venueNames))completionBlock;
 
-
++ (instancetype)sharedProxy;
 @end

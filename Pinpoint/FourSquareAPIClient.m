@@ -6,38 +6,63 @@
 //  Copyright (c) 2015 Flatiron School. All rights reserved.
 //
 
+
+
 #import "FourSquareAPIClient.h"
+#import "FourSquares.h"
+#import <AFNetworking.h>
+
+#define ClIENT_ID @"NGM1D44QJ2XO24YTY52BJ4UXI4ZYABMCNK5LDOXGFBU4X20P"
+#define CLIENT_SECRET @"5W5EIH2FLYR35SFW3R3EFPZPACWJDL0EXM2KX1GW12XVMNSG"
+#define V @"20140806"
 
 @implementation FourSquareAPIClient
 
--(void)getNamesOfAllFoursquareVenuesNearZipCode:(NSNumber *)zipCode
-                              CompletionHandler:(void (^)(NSArray *venuNames))completionBlock
++ (instancetype)sharedProxy
 {
-    NSURLSession *mySession = [NSURLSession sharedSession];
-    NSString *baseURL = @"https://api.foursquare.com/v2/";
-    NSString *baseParams = @"client_id=NGM1D44QJ2XO24YTY52BJ4UXI4ZYABMCNK5LDOXGFBU4X20P&client_secret=5W5EIH2FLYR35SFW3R3EFPZPACWJDL0EXM2KX1GW12XVMNSG&v=20140806";
+    static FourSquareAPIClient *sharedProxy;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedProxy = [[self alloc] init];
+    });
+    return sharedProxy;
+}
+
+-(void)getNamesOfAllFoursquareVenuesWithTerm: (NSString *)term
+                                   Latitiude:(NSString *)latitude
+                                   Longitude:(NSString *)longitude
+                           CompletionHandler:(void (^)(NSArray *venueNames))completionBlock
+{
+
+    NSString *foursquareStringURL = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/explore?"];
     
-    NSString *searchString = [NSString stringWithFormat:@"%@venues/search?%@&near=%@",baseURL,baseParams,zipCode];
-    NSURL *foursquareURL = [NSURL URLWithString:searchString];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSURLSessionDataTask *task = [mySession dataTaskWithURL:foursquareURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSString *latlng = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
+    
+    NSDictionary *urlParams = @{@"client_id": ClIENT_ID, @"client_secret": CLIENT_SECRET, @"v":V, @"ll": latlng, @"query":term};
+    
+    [manager GET:foursquareStringURL parameters:urlParams success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"Got Foursquare Data");
         
-        NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                                         options:0 error:nil];
+        NSArray *venuesArray = responseObject[@"response"][@"groups"][0][@"items"];
         
-        NSArray *venuesArray = resultDictionary[@"response"][@"venues"];
-        NSMutableArray *venueNames = [[NSMutableArray alloc] init];
+        NSMutableArray *foursquareVenues = [[NSMutableArray alloc] init];
+    
         for (NSDictionary *venue in venuesArray) {
-            [venueNames addObject:venue[@"name"]];
+            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:venue[@"venue"][@"location"][@"lat"] Longitude:venue[@"venue"][@"location"][@"lng"] Address:venue[@"venue"][@"location"][@"address"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"]];
+            [foursquareVenues addObject:foursquareVenue];
         }
         
-        completionBlock(venueNames);
+        completionBlock(foursquareVenues);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        NSLog(@"%@",error);
         
     }];
     
-    [task resume];
 }
-
 
 
 @end
