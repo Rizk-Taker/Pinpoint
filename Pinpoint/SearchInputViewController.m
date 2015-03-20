@@ -9,7 +9,6 @@
 #import "SearchInputViewController.h"
 #import "AggregateDataStore.h"
 #import "PinpointComparisonHelper.h"
-#import "FourSquareAPIClient.h"
 #import "GoogleAPIClient.h"
 #import "FourSquareAPIClient.h"
 #import "YelpAPIClient.h"
@@ -19,9 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 
-@property (strong, nonatomic) GoogleAPIClient *googleProxy;
-@property (strong, nonatomic) FourSquareAPIClient *foursquareProxy;
-@property (strong, nonatomic) YelpAPIClient *yelpProxy;
 
 @property (strong, nonatomic) NSArray *results;
 @property (strong, nonatomic) PinpointComparisonHelper *pinpointComparisonHelper;
@@ -42,9 +38,7 @@
     
     self.pinpointComparisonHelper = [[PinpointComparisonHelper alloc] init];
     
-    self.googleProxy = [GoogleAPIClient sharedProxy];
-    self.foursquareProxy = [FourSquareAPIClient sharedProxy];
-    self.yelpProxy = [YelpAPIClient sharedProxy];
+
     
     [self.pinpointComparisonHelper combineResultsWithTerm:@"sushi" Latitiude:@"40.7127" Longitude:@"-74.0059" CompletionHandler:^(NSArray *pinPointArray) {
         NSLog(@"pinpointComparisonHelper in ViewDidLoad");

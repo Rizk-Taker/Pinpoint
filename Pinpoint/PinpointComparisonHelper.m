@@ -8,6 +8,9 @@
 
 #import "PinpointComparisonHelper.h"
 #import "AggregateDataStore.h"
+#import "FourSquareAPIClient.h"
+#import "YelpAPIClient.h"
+#import "GoogleAPIClient.h"
 
 @implementation PinpointComparisonHelper
 
@@ -19,11 +22,15 @@
                       Longitude:(NSString *)longitude
               CompletionHandler:(void (^)(NSArray *pinPointArray))completionBlock {
     
+    self.googleProxy = [GoogleAPIClient sharedProxy];
+    self.foursquareProxy = [FourSquareAPIClient sharedProxy];
+    self.yelpProxy = [YelpAPIClient sharedProxy];
+    
     __block NSArray *yelpData = [[NSArray alloc] init];
     __block NSArray *googleData = [[NSArray alloc] init];
     __block NSArray *foursquareData = [[NSArray alloc] init];
     
-    NSArray *results = [[NSArray alloc] init];
+//    NSArray *results = [[NSArray alloc] init];
     
     self.dataStore = [AggregateDataStore sharedDataStore];
     [self.dataStore getYelpDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *yelpArray) {

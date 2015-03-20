@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FourSquareAPIClient;
+@class YelpAPIClient;
+@class GoogleAPIClient;
 @class AggregateDataStore;
 
 @interface PinpointComparisonHelper : NSObject
@@ -16,5 +19,7 @@
               CompletionHandler:(void (^)(NSArray *pinPointArray))completionBlock;
 
 @property (strong, nonatomic) AggregateDataStore  *dataStore;
-
+@property (strong, nonatomic) GoogleAPIClient *googleProxy;
+@property (strong, nonatomic) FourSquareAPIClient *foursquareProxy;
+@property (strong, nonatomic) YelpAPIClient *yelpProxy;
 @end
