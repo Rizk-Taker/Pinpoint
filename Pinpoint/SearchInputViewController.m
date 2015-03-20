@@ -62,6 +62,24 @@
     NSLog(@"%@",self.locationTextField.text);
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    NSLog(@"Should return");
+    
+    
+//    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@""];
+//    [self.navigationController pushViewController:controller animated:YES];
+//    
+//    [self.searchTextField resignFirstResponder];
+//    
+//    
+    
+    return YES;
+    
+}
+
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
