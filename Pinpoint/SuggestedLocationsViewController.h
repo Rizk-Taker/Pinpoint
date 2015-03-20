@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol SuggestedLocationsViewControllerDelegate <NSObject>
+@required
+- (void)dataFromController:(NSString *)data;
+@end
 
-@interface SuggestedLocationsViewController : UIViewController
+@interface SuggestedLocationsViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, retain) NSString *data;
+@property (nonatomic, weak) id<SuggestedLocationsViewControllerDelegate> delegate;
+- (void)textFieldDidChange:(NSNotification *)notification;
 
 @end

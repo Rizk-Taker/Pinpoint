@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchInputViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
-
+@interface SearchInputViewController : UIViewController <UITextFieldDelegate>
 
 @end
 

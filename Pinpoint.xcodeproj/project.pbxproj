@@ -28,6 +28,7 @@
 		BCC75FF51ABB66D500923ED8 /* SuggestedLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FF41ABB66D500923ED8 /* SuggestedLocationsViewController.m */; };
 		BCC75FFC1ABB688400923ED8 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FFB1ABB688400923ED8 /* ResultsViewController.m */; };
 		BCC75FFF1ABB68B700923ED8 /* ResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FFE1ABB68B700923ED8 /* ResultDetailViewController.m */; };
+		BCC760051ABCA8A800923ED8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC760041ABCA8A800923ED8 /* TableViewController.m */; };
 		BCF8733A1AB7767300BC13DB /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */; };
 		BCF8733B1AB7767300BC13DB /* YelpAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF873391AB7767300BC13DB /* YelpAPIClient.m */; };
 		BCF873541AB7768200BC13DB /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF8733D1AB7768200BC13DB /* OACall.m */; };
@@ -104,6 +105,8 @@
 		BCC75FFB1ABB688400923ED8 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		BCC75FFD1ABB68B700923ED8 /* ResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultDetailViewController.h; sourceTree = "<group>"; };
 		BCC75FFE1ABB68B700923ED8 /* ResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultDetailViewController.m; sourceTree = "<group>"; };
+		BCC760031ABCA8A800923ED8 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		BCC760041ABCA8A800923ED8 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		BCF873361AB7767300BC13DB /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		BCF873371AB7767300BC13DB /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		BCF873381AB7767300BC13DB /* YelpAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIClient.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
 				BCF873711AB7895F00BC13DB /* main.m */,
 				BC5E47901AB37F1C00234862 /* Supporting Files */,
+				BCC760031ABCA8A800923ED8 /* TableViewController.h */,
+				BCC760041ABCA8A800923ED8 /* TableViewController.m */,
 			);
 			path = Pinpoint;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				BCF873541AB7768200BC13DB /* OACall.m in Sources */,
 				BCF873721AB7895F00BC13DB /* main.m in Sources */,
 				BCC75FF11ABB4F1900923ED8 /* SPGooglePlacesAutocompleteUtilities.m in Sources */,
+				BCC760051ABCA8A800923ED8 /* TableViewController.m in Sources */,
 				BCC75FF21ABB4F1900923ED8 /* SPGooglePlacesPlaceDetailQuery.m in Sources */,
 				BCC75FCE1AB8F9A500923ED8 /* Yelpers.m in Sources */,
 				BCC75FD81AB9075400923ED8 /* GoogleAPIClient.m in Sources */,

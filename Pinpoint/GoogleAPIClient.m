@@ -38,16 +38,36 @@
     if (self = [super init]) {
         self.searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] initWithApiKey:kGooglePlacesAPIKey];
     }
+    
     return self;
 }
 
+
+- (void)handleSearchForSearchString:(NSString *)searchString withCompletionBlock:(void (^)(BOOL success, NSArray *places))completionBlock
+{
+    self.searchQuery.input = searchString;
+    [self.searchQuery fetchPlaces:^(NSArray *places, NSError *error) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            if (error) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not fetch Places" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+                completionBlock(NO, nil);
+            } else {
+                // FIXME: this is a very brittle way to implement current location
+                NSMutableArray *placesWithCurrentLocation = [NSMutableArray arrayWithObject:@"Current Location"];
+                [placesWithCurrentLocation addObjectsFromArray:places];
+                completionBlock(YES, placesWithCurrentLocation);
+            }
+        }];
+    }];
+}
 
 - (void)getNamesOfAllGooglePlacesWithTerm: (NSString *)term
                                 Latitude:(NSString *)latitude
                                Longitude:(NSString *)longitude
                        CompletionHandler:(void (^)(NSArray *venueNames))completionBlock
 {
-    NSString *googleStringURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?"];
+    NSString *googleSearchStringURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?"];
     
     NSString *latlng = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
     
@@ -55,7 +75,7 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:googleStringURL parameters:urlParams success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:googleSearchStringURL parameters:urlParams success:^(NSURLSessionDataTask *task, id responseObject) {
 
         NSArray *venuesArray = responseObject[@"results"];
         NSMutableArray *googleVenues = [[NSMutableArray alloc] init];

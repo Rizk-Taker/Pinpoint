@@ -14,16 +14,18 @@
 #import "YelpAPIClient.h"
 #import "SuggestedLocationsViewController.h"
 
-@interface SearchInputViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@interface SearchInputViewController () <SuggestedLocationsViewControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+
 - (IBAction)pinpointTapped:(id)sender;
 
 
 @property (strong, nonatomic) NSArray *results;
 @property (strong, nonatomic) PinpointComparisonHelper *pinpointComparisonHelper;
-@property (strong, nonatomic) FourSquareAPIClient *foursquare;
+
+@property (strong, nonatomic) SuggestedLocationsViewController *suggestedVC;
 @end
 
 @implementation SearchInputViewController
@@ -32,21 +34,18 @@
     
     [super viewDidLoad];
     
-    self.myTableView.delegate = self;
-    self.myTableView.dataSource = self;
-    
     self.locationTextField.delegate = self;
     self.searchTextField.delegate = self;
-    
-    self.pinpointComparisonHelper = [[PinpointComparisonHelper alloc] init];
-    
+
 
     
-    [self.pinpointComparisonHelper combineResultsWithTerm:@"sushi" Latitiude:@"40.7127" Longitude:@"-74.0059" CompletionHandler:^(NSArray *pinPointArray) {
-        NSLog(@"pinpointComparisonHelper in ViewDidLoad");
-        self.results = pinPointArray;
-        [self.myTableView reloadData];
-    }];
+    
+//    self.pinpointComparisonHelper = [[PinpointComparisonHelper alloc] init];
+//    
+//    [self.pinpointComparisonHelper combineResultsWithTerm:@"sushi" Latitiude:@"40.7127" Longitude:@"-74.0059" CompletionHandler:^(NSArray *pinPointArray) {
+//        NSLog(@"pinpointComparisonHelper in ViewDidLoad");
+//        self.results = pinPointArray;
+//    }];
     
 }
 
@@ -54,54 +53,22 @@
     [super didReceiveMemoryWarning];
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"%@",self.locationTextField.text);
+- (void)dataFromController:(NSString *)data
+{
+    self.locationTextField.text = data;
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    NSLog(@"Should return");
-    
-    
-//    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@""];
-//    [self.navigationController pushViewController:controller animated:YES];
-//    
-//    [self.searchTextField resignFirstResponder];
-//    
-//    
-    
-    return YES;
-    
+- (void)passDataForward
+{
+    self.locationTextField.text =self.suggestedVC.data;
+    self.suggestedVC.delegate = self; // Set the second view controller's delegate to self
 }
 
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    SuggestedLocationsViewController *suggestedVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SuggestedLocationsViewController"];
-    
-    [self.navigationController pushViewController:suggestedVC animated:YES];
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    self.suggestedVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SuggestedLocationsViewController"];;
+    [self.navigationController pushViewController:self.suggestedVC animated:YES];
     return YES;
 }
-
-
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.results count];
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *myCell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    
-    myCell.textLabel.text = self.results[indexPath.row];
-    
-    return myCell;
-}
-
 
 - (IBAction)pinpointTapped:(id)sender {
     
