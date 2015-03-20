@@ -12,11 +12,13 @@
 #import "GoogleAPIClient.h"
 #import "FourSquareAPIClient.h"
 #import "YelpAPIClient.h"
+#import "SuggestedLocationsViewController.h"
 
 @interface SearchInputViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+- (IBAction)pinpointTapped:(id)sender;
 
 
 @property (strong, nonatomic) NSArray *results;
@@ -72,6 +74,13 @@
     
 }
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    SuggestedLocationsViewController *suggestedVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SuggestedLocationsViewController"];
+    
+    [self.navigationController pushViewController:suggestedVC animated:YES];
+    return YES;
+}
+
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -94,4 +103,7 @@
 }
 
 
+- (IBAction)pinpointTapped:(id)sender {
+    
+}
 @end
