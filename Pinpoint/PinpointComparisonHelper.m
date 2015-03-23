@@ -11,6 +11,9 @@
 #import "FourSquareAPIClient.h"
 #import "YelpAPIClient.h"
 #import "GoogleAPIClient.h"
+#import "GooglePlace.h"
+#import "Yelpers.h"
+#import "FourSquares.h"
 
 @implementation PinpointComparisonHelper
 
@@ -50,13 +53,32 @@
         NSLog(@"I am in Google Place's data store");
     }];
    
+    for (GooglePlace *googlePlace in googleData) {
+        
+        NSString *googleLatLong = [googlePlace.latitude stringByAppendingString:googlePlace.longitude];
+        
+        NSDictionary *googleDictionary = @{googleLatLong:@0};
+        
+        for (FourSquares *fourSquarePlace in foursquareData) {
+            
+            NSString *fourSquareLatLong = [fourSquarePlace.latitude stringByAppendingString:fourSquarePlace.longitude];
+            
+            if (googleDictionary[fourSquareLatLong]) {
+                [googleDictionary setValue:@1 forKey:fourSquareLatLong];
+            }
+        }
+        
+        for (Yelpers *yelpPlace in yelpData) {
+            NSString *yelpLatLong = [yelpPlace.latitude stringByAppendingString:yelpPlace.longitude];
+            
+            if (googleDictionary[yelpLatLong]) {
+                [googleDictionary setValue:@2 forKey:yelpLatLong];
+            }
+        }
+    }
+    
     completionBlock(googleData);
     
-    
-    
-    
-    //        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-    //        }];
     
     
 }

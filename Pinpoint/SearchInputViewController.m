@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 @property (strong, nonatomic) NSArray *results;
+
 @property (strong, nonatomic) PinpointComparisonHelper *pinpointComparisonHelper;
 @property (strong, nonatomic) SuggestedLocationsViewController *suggestedVC;
 
@@ -35,8 +36,6 @@
     
     self.locationTextField.delegate = self;
     self.searchTextField.delegate = self;
-    
-    
     
 }
 
