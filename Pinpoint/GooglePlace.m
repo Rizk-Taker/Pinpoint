@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Flatiron School. All rights reserved.
 //
 
-#import "GooglePlaces.h"
+#import "GooglePlace.h"
 
-@implementation GooglePlaces
+@implementation GooglePlace
 - (instancetype)initWithName:(NSString *)name
                     Latitude:(NSString *)latitude
                    Longitude:(NSString *)longitude

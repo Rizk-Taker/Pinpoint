@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34BEBD031DF5A8276805604B /* libPods-Pinpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34D2AC13F3EBEDC7FC6B07 /* libPods-Pinpoint.a */; };
+		BC39DF751ABF8DCE00C6A7F3 /* Rectangle 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */; };
 		BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47951AB37F1C00234862 /* AppDelegate.m */; };
 		BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47981AB37F1C00234862 /* SearchInputViewController.m */; };
 		BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479A1AB37F1C00234862 /* Main.storyboard */; };
@@ -15,9 +16,10 @@
 		BC5E47A11AB37F1C00234862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */; };
 		BC5E47AD1AB37F1C00234862 /* PinpointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47AC1AB37F1C00234862 /* PinpointTests.m */; };
 		BC5E47BB1AB37F3400234862 /* FourSquareAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */; };
+		BC99B7EE1ABF3D6F000222E9 /* Slice 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC99B7ED1ABF3D6F000222E9 /* Slice 1.png */; };
 		BCC75FCE1AB8F9A500923ED8 /* Yelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FCD1AB8F9A500923ED8 /* Yelpers.m */; };
 		BCC75FD11AB8F9B400923ED8 /* FourSquares.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD01AB8F9B400923ED8 /* FourSquares.m */; };
-		BCC75FD51AB9073600923ED8 /* GooglePlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD41AB9073600923ED8 /* GooglePlaces.m */; };
+		BCC75FD51AB9073600923ED8 /* GooglePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD41AB9073600923ED8 /* GooglePlace.m */; };
 		BCC75FD81AB9075400923ED8 /* GoogleAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */; };
 		BCC75FE11AB9F2E000923ED8 /* AggregateDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FE01AB9F2E000923ED8 /* AggregateDataStore.m */; };
 		BCC75FE41AB9F43200923ED8 /* PinpointComparisonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC75FE31AB9F43200923ED8 /* PinpointComparisonHelper.m */; };
@@ -64,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0C69A35E75EFB18093D98152 /* Pods-Pinpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		494D8F7C31F9037035B15582 /* Pods-Pinpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.release.xcconfig"; sourceTree = "<group>"; };
+		BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 1.png"; sourceTree = "<group>"; };
 		BC5E478D1AB37F1C00234862 /* Pinpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5E47911AB37F1C00234862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5E47941AB37F1C00234862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,12 +81,13 @@
 		BC5E47AC1AB37F1C00234862 /* PinpointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinpointTests.m; sourceTree = "<group>"; };
 		BC5E47B81AB37F3400234862 /* FourSquareAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIClient.h; sourceTree = "<group>"; };
 		BC5E47B91AB37F3400234862 /* FourSquareAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIClient.m; sourceTree = "<group>"; };
+		BC99B7ED1ABF3D6F000222E9 /* Slice 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slice 1.png"; sourceTree = "<group>"; };
 		BCC75FCC1AB8F9A500923ED8 /* Yelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yelpers.h; sourceTree = "<group>"; };
 		BCC75FCD1AB8F9A500923ED8 /* Yelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yelpers.m; sourceTree = "<group>"; };
 		BCC75FCF1AB8F9B400923ED8 /* FourSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquares.h; sourceTree = "<group>"; };
 		BCC75FD01AB8F9B400923ED8 /* FourSquares.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquares.m; sourceTree = "<group>"; };
-		BCC75FD31AB9073600923ED8 /* GooglePlaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlaces.h; sourceTree = "<group>"; };
-		BCC75FD41AB9073600923ED8 /* GooglePlaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlaces.m; sourceTree = "<group>"; };
+		BCC75FD31AB9073600923ED8 /* GooglePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlace.h; sourceTree = "<group>"; };
+		BCC75FD41AB9073600923ED8 /* GooglePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlace.m; sourceTree = "<group>"; };
 		BCC75FD61AB9075400923ED8 /* GoogleAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAPIClient.h; sourceTree = "<group>"; };
 		BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAPIClient.m; sourceTree = "<group>"; };
 		BCC75FDF1AB9F2E000923ED8 /* AggregateDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AggregateDataStore.h; sourceTree = "<group>"; };
@@ -255,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				BCC75FE51ABB4EFF00923ED8 /* GoogleAutoComplete */,
-				BCC75FD31AB9073600923ED8 /* GooglePlaces.h */,
-				BCC75FD41AB9073600923ED8 /* GooglePlaces.m */,
+				BCC75FD31AB9073600923ED8 /* GooglePlace.h */,
+				BCC75FD41AB9073600923ED8 /* GooglePlace.m */,
 				BCC75FD61AB9075400923ED8 /* GoogleAPIClient.h */,
 				BCC75FD71AB9075400923ED8 /* GoogleAPIClient.m */,
 			);
@@ -311,6 +315,8 @@
 			children = (
 				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
 				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
+				BC99B7ED1ABF3D6F000222E9 /* Slice 1.png */,
+				BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -475,7 +481,9 @@
 			files = (
 				BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */,
 				BC5E47A11AB37F1C00234862 /* LaunchScreen.xib in Resources */,
+				BC39DF751ABF8DCE00C6A7F3 /* Rectangle 1.png in Resources */,
 				BC5E479E1AB37F1C00234862 /* Images.xcassets in Resources */,
+				BC99B7EE1ABF3D6F000222E9 /* Slice 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +546,7 @@
 				BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */,
 				BCF873651AB776A200BC13DB /* Base64Transcoder.c in Sources */,
 				BCC75FD11AB8F9B400923ED8 /* FourSquares.m in Sources */,
-				BCC75FD51AB9073600923ED8 /* GooglePlaces.m in Sources */,
+				BCC75FD51AB9073600923ED8 /* GooglePlace.m in Sources */,
 				BCF8735A1AB7768200BC13DB /* OAProblem.m in Sources */,
 				BCC75FFC1ABB688400923ED8 /* ResultsViewController.m in Sources */,
 				BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */,

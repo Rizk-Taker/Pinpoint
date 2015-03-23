@@ -91,7 +91,24 @@ static NSString * const kSearchLimit       = @"20";
             
             NSMutableArray *yelpVenues = [[NSMutableArray alloc] init];
             for (NSDictionary *venue in businessArray) {
-                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:venue[@"location"][@"coordinate"][@"latitude"] Longitude:venue[@"location"][@"coordinate"][@"longitude"] Address:venue[@"location"][@"display_address"] Rating:venue[@"rating"] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"]];
+                
+                NSString *latString = venue[@"location"][@"coordinate"][@"latitude"];
+                
+                if ([latString hasPrefix:@"-"]) {
+                    latString = [latString substringToIndex:7];
+                } else {
+                    latString = [latString substringToIndex:6];
+                }
+                
+                NSString *lngString = venue[@"location"][@"coordinate"][@"longitude"];
+                
+                if ([lngString hasPrefix:@"-"]) {
+                    lngString = [latString substringToIndex:7];
+                } else {
+                    lngString = [latString substringToIndex:6];
+                }
+                
+                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"location"][@"display_address"] Rating:venue[@"rating"] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"]];
                 
                 [yelpVenues addObject:yelpLocation];
             }

@@ -16,7 +16,7 @@
                                 Latitude:(NSString *)latitude
                                Longitude:(NSString *)longitude
                        CompletionHandler:(void (^)(NSArray *venueNames))completionBlock;
-
+- (void)handleSearchForSearchString:(NSString *)searchString withCompletionBlock:(void (^)(BOOL success, NSArray *places))completionBlock;
 + (GoogleAPIClient *)sharedProxy;
 
 @end

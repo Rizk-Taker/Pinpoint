@@ -7,12 +7,13 @@
 //
 
 #import "GoogleAPIClient.h"
-#import "GooglePlaces.h"
+#import "GooglePlace.h"
 #import <AFNetworking.h>
 #import "SPGooglePlacesAutocomplete.h"
 #import "SPGooglePlacesPlaceDetailQuery.h"
 
 #define GOOGLE_API_KEY @"AIzaSyA7-FMzdLbN48sM_qZ3GBs85qvptW4ge5Q"
+
 @interface GoogleAPIClient ()
 
 @property (strong, nonatomic) SPGooglePlacesAutocompleteQuery *searchQuery;
@@ -52,7 +53,7 @@
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not fetch Places" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
                 completionBlock(NO, nil);
-            } else {
+             } else {
                 // FIXME: this is a very brittle way to implement current location
                 NSMutableArray *placesWithCurrentLocation = [NSMutableArray arrayWithObject:@"Current Location"];
                 [placesWithCurrentLocation addObjectsFromArray:places];
@@ -80,7 +81,24 @@
         NSArray *venuesArray = responseObject[@"results"];
         NSMutableArray *googleVenues = [[NSMutableArray alloc] init];
         for (NSDictionary *venue in venuesArray) {
-            GooglePlaces *googleVenue = [[GooglePlaces alloc] initWithName:venue[@"name"] Latitude:venue[@"geometry"][@"location"][@"lat"] Longitude:venue[@"geometry"][@"location"][@"lng"] Address:venue[@"vicinity"] Rating:venue[@"rating"] PriceLevel:venue[@"price_level"] OpenNow:venue[@"opening_hours"][@"open_now"]];
+   
+            NSString *latString = venue[@"geometry"][@"location"][@"lat"];
+            
+            if ([latString hasPrefix:@"-"]) {
+             latString = [latString substringToIndex:7];
+            } else {
+            latString = [latString substringToIndex:6];
+            }
+            
+            NSString *lngString = venue[@"geometry"][@"location"][@"lng"];
+            
+            if ([lngString hasPrefix:@"-"]) {
+                lngString = [latString substringToIndex:7];
+            } else {
+                lngString = [latString substringToIndex:6];
+            }
+            
+            GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"vicinity"] Rating:venue[@"rating"] PriceLevel:venue[@"price_level"] OpenNow:venue[@"opening_hours"][@"open_now"]];
             [googleVenues addObject:googleVenue];
         }
         

@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPGooglePlacesAutocompletePlace.h"
+
 @protocol SuggestedLocationsViewControllerDelegate <NSObject>
+
 @required
-- (void)dataFromController:(NSString *)data;
+
+- (void)dataFromController:(SPGooglePlacesAutocompletePlace *)data;
+
 @end
 
-@interface SuggestedLocationsViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, retain) NSString *data;
+@interface SuggestedLocationsViewController : UIViewController
+
 @property (nonatomic, weak) id<SuggestedLocationsViewControllerDelegate> delegate;
-- (void)textFieldDidChange:(NSNotification *)notification;
 
 @end

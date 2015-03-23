@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuggestedLocationsViewController.h"
 
-@interface SearchInputViewController : UIViewController <UITextFieldDelegate>
+@interface SearchInputViewController : UIViewController
 
 @end
 

@@ -50,7 +50,24 @@
         NSMutableArray *foursquareVenues = [[NSMutableArray alloc] init];
     
         for (NSDictionary *venue in venuesArray) {
-            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:venue[@"venue"][@"location"][@"lat"] Longitude:venue[@"venue"][@"location"][@"lng"] Address:venue[@"venue"][@"location"][@"address"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"]];
+            
+            NSString *latString = venue[@"venue"][@"location"][@"lat"];
+            
+            if ([latString hasPrefix:@"-"]) {
+                latString = [latString substringToIndex:7];
+            } else {
+                latString = [latString substringToIndex:6];
+            }
+            
+            NSString *lngString = venue[@"venue"][@"location"][@"lng"];
+            
+            if ([lngString hasPrefix:@"-"]) {
+                lngString = [latString substringToIndex:7];
+            } else {
+                lngString = [latString substringToIndex:6];
+            }
+            
+            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:latString Longitude:lngString Address:venue[@"venue"][@"location"][@"address"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"]];
             [foursquareVenues addObject:foursquareVenue];
         }
         

@@ -34,8 +34,8 @@
     
     self.dataStore = [AggregateDataStore sharedDataStore];
     [self.dataStore getYelpDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *yelpArray) {
-        NSLog(@"I am in Yelp's Data Store");
         yelpData = yelpArray;
+        NSLog(@"I am in Yelp's Data Store");
     }];
     
     
@@ -50,7 +50,7 @@
         NSLog(@"I am in Google Place's data store");
     }];
    
-    completionBlock(foursquareData);
+    completionBlock(googleData);
     
     
     

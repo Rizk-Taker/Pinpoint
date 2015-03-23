@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GooglePlaces : NSObject
+@interface GooglePlace : NSObject
 
 - (instancetype)initWithName:(NSString *)name
                     Latitude:(NSString *)latitude
