@@ -74,7 +74,7 @@
              } else {
                  NSLog(@"Foursquare Long too short");
              }
-            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:latString Longitude:lngString Address:venue[@"venue"][@"location"][@"address"]                        State:venue[@"venue"][@"location"][@"state"]  City:venue[@"venue"][@"location"][@"city"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"] PriceLevel:venue[@"venue"][@"price"][@"tier"]];
+            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:latString Longitude:lngString Address:venue[@"venue"][@"location"][@"address"]                        State:venue[@"venue"][@"location"][@"state"]  City:venue[@"venue"][@"location"][@"city"] Rating:[NSString stringWithFormat:@"%@",venue[@"venue"][@"rating"]] Url:venue[@"venue"][@"url"] Zipcode:[NSString stringWithFormat:@"%@",venue[@"venue"][@"location"][@"postalCode"]] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"] PriceLevel:[NSString stringWithFormat:@"%@",venue[@"venue"][@"price"][@"tier"]]];
             [foursquareVenues addObject:foursquareVenue];
         }
         

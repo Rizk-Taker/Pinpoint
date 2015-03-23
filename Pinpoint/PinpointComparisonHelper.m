@@ -33,7 +33,7 @@
     __block NSArray *googleData = [[NSArray alloc] init];
     __block NSArray *foursquareData = [[NSArray alloc] init];
     
-//    NSArray *results = [[NSArray alloc] init];
+    NSArray *results = [[NSArray alloc] init];
     
     self.dataStore = [AggregateDataStore sharedDataStore];
     [self.dataStore getYelpDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *yelpArray) {
@@ -74,12 +74,13 @@
             if (googleDictionary[yelpLatLong]) {
                 [googleDictionary setValue:@2 forKey:yelpLatLong];
             }
+            
         }
         
         
     }
     
-    completionBlock(googleData);
+    completionBlock(results);
     
     
     

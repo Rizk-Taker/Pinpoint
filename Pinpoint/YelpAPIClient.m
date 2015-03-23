@@ -120,7 +120,7 @@ static NSString * const kSearchLimit       = @"20";
                 NSString *imageURL = venue[@"image_url"];
                 NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
                 
-                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"location"][@"display_address"] Rating:venue[@"rating"] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"] Image:[UIImage imageWithData:imageData]];
+                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"location"][@"display_address"] Rating:[NSString stringWithFormat:@"%@", venue[@"rating"]] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"] Image:[UIImage imageWithData:imageData]];
                 
                 [yelpVenues addObject:yelpLocation];
             }

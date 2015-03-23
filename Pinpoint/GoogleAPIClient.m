@@ -103,7 +103,7 @@
             } else {
                 NSLog(@"Google Long too short");
             }
-            GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"vicinity"] Rating:venue[@"rating"] PriceLevel:venue[@"price_level"] OpenNow:venue[@"opening_hours"][@"open_now"]];
+            GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"vicinity"] Rating:[NSString stringWithFormat:@"%@", venue[@"rating"]] PriceLevel:[NSString stringWithFormat:@"%@", venue[@"price_level"]] OpenNow:[NSString stringWithFormat:@"%@", venue[@"opening_hours"][@"open_now"]]];
             [googleVenues addObject:googleVenue];
         }
         
