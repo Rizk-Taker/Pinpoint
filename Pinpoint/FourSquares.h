@@ -14,6 +14,8 @@
                     Latitude:(NSString *)latitude
                    Longitude:(NSString *)longitude
                      Address:(NSString *)address
+                       State:(NSString *)state
+                        City:(NSString *)city
                       Rating:(NSString *)rating
                          Url:(NSString *)url
                      Zipcode:(NSString *)zipCode
@@ -27,8 +29,11 @@
 @property (strong, nonatomic) NSString *rating;
 @property (strong, nonatomic) NSString *ratingImage;
 @property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) NSString *zipCode; // maybe
+@property (strong, nonatomic) NSString *zipCode;
 @property (strong, nonatomic) NSString *phoneNumber;
 @property (strong, nonatomic) NSString *priceLevel;
+@property (strong, nonatomic) NSString *state;
+@property (strong, nonatomic) NSString *city;
+
 
 @end

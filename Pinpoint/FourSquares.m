@@ -13,6 +13,8 @@
                     Latitude:(NSString *)latitude
                    Longitude:(NSString *)longitude
                      Address:(NSString *)address
+                       State:(NSString *)state
+                        City:(NSString *)city
                       Rating:(NSString *)rating
                          Url:(NSString *)url
                      Zipcode:(NSString *)zipCode
@@ -31,6 +33,9 @@
         _zipCode = zipCode;
         _phoneNumber = phoneNumber;
         _priceLevel = priceLevel;
+        _city = city;
+        _state = state;
+        
     }
     return self;
 }

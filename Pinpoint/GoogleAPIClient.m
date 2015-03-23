@@ -81,6 +81,7 @@
         NSArray *venuesArray = responseObject[@"results"];
         NSMutableArray *googleVenues = [[NSMutableArray alloc] init];
         for (NSDictionary *venue in venuesArray) {
+            
             NSString *latString = [NSString stringWithFormat:@"%@", venue[@"geometry"][@"location"][@"lat"]];
             if ([latString length] >= 6) {
 //            if ([latString hasPrefix:@"-"]) {
