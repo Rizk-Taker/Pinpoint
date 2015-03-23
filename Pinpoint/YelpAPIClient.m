@@ -92,23 +92,35 @@ static NSString * const kSearchLimit       = @"20";
             NSMutableArray *yelpVenues = [[NSMutableArray alloc] init];
             for (NSDictionary *venue in businessArray) {
                 
-                NSString *latString = venue[@"location"][@"coordinate"][@"latitude"];
                 
-                if ([latString hasPrefix:@"-"]) {
-                    latString = [latString substringToIndex:7];
-                } else {
+                NSString *latString = [NSString stringWithFormat:@"%@", venue[@"location"][@"coordinate"][@"latitude"]];
+                
+                if ([latString length] >= 6) {
+//                if ([latString hasPrefix:@"-"]) {
+//                    latString = [latString substringToIndex:7];
+//                } else {
                     latString = [latString substringToIndex:6];
-                }
-                
-                NSString *lngString = venue[@"location"][@"coordinate"][@"longitude"];
-                
-                if ([lngString hasPrefix:@"-"]) {
-                    lngString = [latString substringToIndex:7];
+//                }
                 } else {
-                    lngString = [latString substringToIndex:6];
+                    NSLog(@"Yelp Lat too short");
                 }
                 
-                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"location"][@"display_address"] Rating:venue[@"rating"] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"]];
+                NSString *lngString = [NSString stringWithFormat:@"%@", venue[@"location"][@"coordinate"][@"longitude"]];
+                
+                if ([lngString length] >= 6) {
+//                if ([lngString hasPrefix:@"-"]) {
+//                    lngString = [latString substringToIndex:7];
+//                } else {
+                    lngString = [latString substringToIndex:6];
+//                }
+                } else {
+                    NSLog(@"Yelp Long too short");
+                }
+                
+                NSString *imageURL = venue[@"image_url"];
+                NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+                
+                Yelpers *yelpLocation = [[Yelpers alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"location"][@"display_address"] Rating:venue[@"rating"] Url:venue[@"url"] Zipcode:venue[@"location"][@"postal_code"] PhoneNumber:venue[@"display_phone"] Image:[UIImage imageWithData:imageData]];
                 
                 [yelpVenues addObject:yelpLocation];
             }

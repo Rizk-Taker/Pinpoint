@@ -36,7 +36,6 @@
     
     self.locationTextField.delegate = self;
     self.searchTextField.delegate = self;
-    
 }
 
 

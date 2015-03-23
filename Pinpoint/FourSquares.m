@@ -16,7 +16,9 @@
                       Rating:(NSString *)rating
                          Url:(NSString *)url
                      Zipcode:(NSString *)zipCode
-                 PhoneNumber:(NSString *)phoneNumber {
+                 PhoneNumber:(NSString *)phoneNumber
+                  PriceLevel:(NSString *)priceLevel
+{
     self = [super init];
     
     if (self) {
@@ -28,6 +30,7 @@
         _url = url;
         _zipCode = zipCode;
         _phoneNumber = phoneNumber;
+        _priceLevel = priceLevel;
     }
     return self;
 }

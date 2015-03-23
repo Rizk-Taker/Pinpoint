@@ -51,23 +51,30 @@
     
         for (NSDictionary *venue in venuesArray) {
             
-            NSString *latString = venue[@"venue"][@"location"][@"lat"];
+            NSString *latString = [NSString stringWithFormat:@"%@", venue[@"venue"][@"location"][@"lat"]];
             
-            if ([latString hasPrefix:@"-"]) {
-                latString = [latString substringToIndex:7];
-            } else {
+            if ([latString length] >= 6) {
+//            if ([latString hasPrefix:@"-"]) {
+//                latString = [latString substringToIndex:7];
+//            } else {
                 latString = [latString substringToIndex:6];
-            }
-            
-            NSString *lngString = venue[@"venue"][@"location"][@"lng"];
-            
-            if ([lngString hasPrefix:@"-"]) {
-                lngString = [latString substringToIndex:7];
+//            }
             } else {
-                lngString = [latString substringToIndex:6];
+                NSLog(@"Foursquare Lat too short");
             }
+
+            NSString *lngString = [NSString stringWithFormat:@"%@", venue[@"venue"][@"location"][@"lng"]];
             
-            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:latString Longitude:lngString Address:venue[@"venue"][@"location"][@"address"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"]];
+             if ([lngString length] >= 6) {
+//            if ([lngString hasPrefix:@"-"]) {
+//                lngString = [latString substringToIndex:7];
+//            } else {
+                lngString = [latString substringToIndex:6];
+//            }
+             } else {
+                 NSLog(@"Foursquare Long too short");
+             }
+            FourSquares *foursquareVenue = [[FourSquares alloc] initWithName:venue[@"venue"][@"name"] Latitude:latString Longitude:lngString Address:venue[@"venue"][@"location"][@"address"] Rating:venue[@"venue"][@"rating"] Url:venue[@"venue"][@"url"] Zipcode:venue[@"venue"][@"location"][@"postalCode"] PhoneNumber:venue[@"venue"][@"contact"][@"formattedPhone"] PriceLevel:venue[@"venue"][@"price"][@"tier"]];
             [foursquareVenues addObject:foursquareVenue];
         }
         

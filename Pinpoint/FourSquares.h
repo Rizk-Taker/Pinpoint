@@ -17,7 +17,8 @@
                       Rating:(NSString *)rating
                          Url:(NSString *)url
                      Zipcode:(NSString *)zipCode
-                 PhoneNumber:(NSString *)phoneNumber;
+                 PhoneNumber:(NSString *)phoneNumber
+                  PriceLevel:(NSString *)priceLevel;
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *latitude;
@@ -28,5 +29,6 @@
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) NSString *zipCode; // maybe
 @property (strong, nonatomic) NSString *phoneNumber;
+@property (strong, nonatomic) NSString *priceLevel;
 
 @end

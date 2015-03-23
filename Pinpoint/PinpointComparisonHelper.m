@@ -75,6 +75,8 @@
                 [googleDictionary setValue:@2 forKey:yelpLatLong];
             }
         }
+        
+        
     }
     
     completionBlock(googleData);

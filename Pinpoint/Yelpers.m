@@ -7,6 +7,7 @@
 //
 
 #import "Yelpers.h"
+#import <UIKit/UIKit.h> 
 
 @implementation Yelpers
 - (instancetype)initWithName:(NSString *)name
@@ -16,7 +17,8 @@
                       Rating:(NSString *)rating
                          Url:(NSString *)url
                      Zipcode:(NSString *)zipCode
-                 PhoneNumber:(NSString *)phoneNumber {
+                 PhoneNumber:(NSString *)phoneNumber
+                       Image:(UIImage *)image {
     self = [super init];
     
     if (self) {
@@ -28,6 +30,7 @@
         _url = url;
         _zipCode = zipCode;
         _phoneNumber = phoneNumber;
+        _image = image;
     }
     return self;
 }

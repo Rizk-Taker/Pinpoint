@@ -81,23 +81,27 @@
         NSArray *venuesArray = responseObject[@"results"];
         NSMutableArray *googleVenues = [[NSMutableArray alloc] init];
         for (NSDictionary *venue in venuesArray) {
-   
-            NSString *latString = venue[@"geometry"][@"location"][@"lat"];
-            
-            if ([latString hasPrefix:@"-"]) {
-             latString = [latString substringToIndex:7];
-            } else {
+            NSString *latString = [NSString stringWithFormat:@"%@", venue[@"geometry"][@"location"][@"lat"]];
+            if ([latString length] >= 6) {
+//            if ([latString hasPrefix:@"-"]) {
+//             latString = [latString substringToIndex:7];
+//            } else {
             latString = [latString substringToIndex:6];
-            }
-            
-            NSString *lngString = venue[@"geometry"][@"location"][@"lng"];
-            
-            if ([lngString hasPrefix:@"-"]) {
-                lngString = [latString substringToIndex:7];
+//            }
             } else {
-                lngString = [latString substringToIndex:6];
+                NSLog(@"Google Lat too short");
             }
             
+            NSString *lngString = [NSString stringWithFormat:@"%@", venue[@"geometry"][@"location"][@"lng"]];
+            if ([lngString length] >= 6) {
+//            if ([lngString hasPrefix:@"-"]) {
+//                lngString = [latString substringToIndex:7];
+//            } else {
+                lngString = [latString substringToIndex:6];
+//            }
+            } else {
+                NSLog(@"Google Long too short");
+            }
             GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"vicinity"] Rating:venue[@"rating"] PriceLevel:venue[@"price_level"] OpenNow:venue[@"opening_hours"][@"open_now"]];
             [googleVenues addObject:googleVenue];
         }

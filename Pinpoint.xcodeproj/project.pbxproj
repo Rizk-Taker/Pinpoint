@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34BEBD031DF5A8276805604B /* libPods-Pinpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34D2AC13F3EBEDC7FC6B07 /* libPods-Pinpoint.a */; };
 		BC39DF751ABF8DCE00C6A7F3 /* Rectangle 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */; };
+		BC39DF781AC0914800C6A7F3 /* Pinpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BC39DF771AC0914800C6A7F3 /* Pinpoint.m */; };
 		BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47951AB37F1C00234862 /* AppDelegate.m */; };
 		BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47981AB37F1C00234862 /* SearchInputViewController.m */; };
 		BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479A1AB37F1C00234862 /* Main.storyboard */; };
@@ -67,6 +68,8 @@
 		0C69A35E75EFB18093D98152 /* Pods-Pinpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		494D8F7C31F9037035B15582 /* Pods-Pinpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinpoint/Pods-Pinpoint.release.xcconfig"; sourceTree = "<group>"; };
 		BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 1.png"; sourceTree = "<group>"; };
+		BC39DF761AC0914800C6A7F3 /* Pinpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pinpoint.h; sourceTree = "<group>"; };
+		BC39DF771AC0914800C6A7F3 /* Pinpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pinpoint.m; sourceTree = "<group>"; };
 		BC5E478D1AB37F1C00234862 /* Pinpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5E47911AB37F1C00234862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5E47941AB37F1C00234862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -219,7 +222,6 @@
 				BCC75FF81ABB678700923ED8 /* Views */,
 				BCC75FF71ABB677800923ED8 /* Models */,
 				BCC75FF61ABB66D900923ED8 /* Controllers */,
-				BCC75FF91ABB67FE00923ED8 /* Helpers */,
 				BCF873731AB78A8F00BC13DB /* Magic */,
 				BC5E479D1AB37F1C00234862 /* Images.xcassets */,
 				BCF873711AB7895F00BC13DB /* main.m */,
@@ -301,6 +303,7 @@
 		BCC75FF71ABB677800923ED8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCC75FF91ABB67FE00923ED8 /* Pinpoint */,
 				BCF873741AB78DE100BC13DB /* Foursquare */,
 				BCF873751AB78DF300BC13DB /* Yelp */,
 				BCC75FD21AB9072300923ED8 /* GooglePlaces */,
@@ -321,13 +324,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		BCC75FF91ABB67FE00923ED8 /* Helpers */ = {
+		BCC75FF91ABB67FE00923ED8 /* Pinpoint */ = {
 			isa = PBXGroup;
 			children = (
+				BC39DF761AC0914800C6A7F3 /* Pinpoint.h */,
+				BC39DF771AC0914800C6A7F3 /* Pinpoint.m */,
 				BCC75FE21AB9F43200923ED8 /* PinpointComparisonHelper.h */,
 				BCC75FE31AB9F43200923ED8 /* PinpointComparisonHelper.m */,
 			);
-			name = Helpers;
+			name = Pinpoint;
 			sourceTree = "<group>";
 		};
 		BCF873731AB78A8F00BC13DB /* Magic */ = {
@@ -552,6 +557,7 @@
 				BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */,
 				BCC75FE11AB9F2E000923ED8 /* AggregateDataStore.m in Sources */,
 				BCF8735D1AB7768200BC13DB /* OAToken.m in Sources */,
+				BC39DF781AC0914800C6A7F3 /* Pinpoint.m in Sources */,
 				BCF873591AB7768200BC13DB /* OAPlaintextSignatureProvider.m in Sources */,
 				BCC75FEF1ABB4F1900923ED8 /* SPGooglePlacesAutocompletePlace.m in Sources */,
 				BCF873581AB7768200BC13DB /* OAMutableURLRequest.m in Sources */,
