@@ -10,6 +10,7 @@
 #import "AggregateDataStore.h"
 #import "PinpointComparisonHelper.h"
 #import "ResultsViewController.h"
+#import "PinpointLocation.h"
 
 #import "GoogleAPIClient.h"
 #import "FourSquareAPIClient.h"
@@ -19,10 +20,13 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
-@property (strong, nonatomic) NSArray *results;
 
 @property (strong, nonatomic) PinpointComparisonHelper *pinpointComparisonHelper;
 @property (strong, nonatomic) SuggestedLocationsViewController *suggestedVC;
+
+@property (strong, nonatomic) PinpointLocation *location;
+
+
 
 - (IBAction)pinpointTapped:(id)sender;
 
@@ -36,6 +40,8 @@
     
     self.locationTextField.delegate = self;
     self.searchTextField.delegate = self;
+    
+    self.location = [[PinpointLocation alloc] init];
 }
 
 
@@ -43,8 +49,10 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)dataFromController:(SPGooglePlacesAutocompletePlace *)data {
-    self.locationTextField.text = data.name;
+- (void)dataFromController:(NSString *)name {
+    self.locationTextField.text = name;
+    
+    
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -52,6 +60,7 @@
     if (textField == self.locationTextField) {
         self.suggestedVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SuggestedLocationsViewController"];
         self.suggestedVC.delegate = self;
+        self.suggestedVC.location = self.location;
         [self.navigationController pushViewController:self.suggestedVC animated:YES];
         
         return NO;
@@ -68,18 +77,39 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    self.pinpointComparisonHelper = [[PinpointComparisonHelper alloc] init];
-    
-    [self.pinpointComparisonHelper combineResultsWithTerm:@"sushi" Latitiude:@"40.7127" Longitude:@"-74.0059" CompletionHandler:^(NSArray *pinPointArray) {
-        
-        NSLog(@"pinpointComparisonHelper segueing");
-        
-        self.results = pinPointArray;
-    }];
-    
+    NSLog(@"pinpointComparisonHelper segueing");
+
     ResultsViewController *resultsVC = segue.destinationViewController;
-    resultsVC.resultsArray = self.results;
+    NSString *lat = [NSString stringWithFormat:@"%f", self.location.latitude];
+    NSString *lng = [NSString stringWithFormat:@"%f", self.location.longitude];
+    NSString *query = self.searchTextField.text;
     
+    resultsVC.lat = lat;
+    resultsVC.lng = lng;
+    resultsVC.query = query;
+    
+    [resultsVC.myTableView reloadData];
+    
+    
+}
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"results"]) {
+        if (self.location.latitude && self.location.longitude && self.location.name && self.searchTextField.text) {
+            return YES;
+        } else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Invalid search" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *popVC = [UIAlertAction actionWithTitle:@"Word" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            }];
+            
+            [alertController addAction:popVC];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+     return NO;
+        }
+    }
+    return YES;
 }
 
 @end

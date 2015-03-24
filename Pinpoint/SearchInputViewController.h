@@ -10,6 +10,7 @@
 #import "SuggestedLocationsViewController.h"
 
 @interface SearchInputViewController : UIViewController
+@property (strong, nonatomic) NSArray *results;
 
 @end
 

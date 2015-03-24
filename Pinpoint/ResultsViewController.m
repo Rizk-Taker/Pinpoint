@@ -10,8 +10,13 @@
 #import "GoogleAPIClient.h"
 #import "FourSquareAPIClient.h"
 #import "YelpAPIClient.h"
+#import "SearchInputViewController.h"
+#import "Pinpoint.h"
+#import "PinpointComparisonHelper.h"
 
-@interface ResultsViewController ()
+@interface ResultsViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) PinpointComparisonHelper *pinpointComparisonHelper;
 
 
 @end
@@ -20,10 +25,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
 
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+    
+    
+    self.pinpointComparisonHelper = [[PinpointComparisonHelper alloc] init];
+    
+    [self.pinpointComparisonHelper combineResultsWithTerm:self.query Latitiude: self.lat Longitude:self.lng CompletionHandler:^(NSArray *pinPointArray) {
+        
+        if ([pinPointArray count] > 0) {
+            self.resultsArray = pinPointArray;
+            [self.myTableView reloadData];
+        } else {
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"No results found" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *popVC = [UIAlertAction actionWithTitle:@"Word" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }];
+            
+            [alertController addAction:popVC];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+ 
+        }
+        
+    }];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,15 +73,18 @@
     return [self.resultsArray count];
 }
 
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
- */
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
+    
+    Pinpoint *pinpoint = self.resultsArray[indexPath.row];
+    cell.textLabel.text = pinpoint.name;
+    
+    // Configure the cell...
+    
+    return cell;
+}
 
 /*
  // Override to support conditional editing of the table view.
@@ -87,13 +122,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

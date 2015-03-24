@@ -57,7 +57,7 @@
 //            if ([latString hasPrefix:@"-"]) {
 //                latString = [latString substringToIndex:7];
 //            } else {
-                latString = [latString substringToIndex:6];
+                latString = [latString substringToIndex:7];
 //            }
             } else {
                 NSLog(@"Foursquare Lat too short");
@@ -69,7 +69,7 @@
 //            if ([lngString hasPrefix:@"-"]) {
 //                lngString = [latString substringToIndex:7];
 //            } else {
-                lngString = [latString substringToIndex:6];
+                lngString = [lngString substringToIndex:7];
 //            }
              } else {
                  NSLog(@"Foursquare Long too short");

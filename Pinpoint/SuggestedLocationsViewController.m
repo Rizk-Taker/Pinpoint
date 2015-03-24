@@ -10,12 +10,17 @@
 #import "GoogleAPIClient.h"
 #import "GooglePlace.h"
 #import "SPGooglePlacesAutocompletePlace.h"
+#import "PinpointLocation.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface SuggestedLocationsViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SuggestedLocationsViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *autoCompleteTextField;
 @property (weak, nonatomic) IBOutlet UITableView *autoCompleteTableView;
 @property (strong, nonatomic) NSArray *googleAutoCompleteArray;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *currentLocation;
 
 @end
 
@@ -25,10 +30,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.googleAutoCompleteArray = [[NSArray alloc] init];
+
+    self.googleAutoCompleteArray = [[NSArray alloc] initWithObjects:@"Current Location", nil];
     
     self.autoCompleteTableView.delegate = self;
     self.autoCompleteTableView.dataSource = self;
+    self.locationManager.delegate = self;
     
     self.autoCompleteTextField.delegate = self;
     [self.autoCompleteTextField becomeFirstResponder];
@@ -46,6 +53,7 @@
     // Do whatever you like to respond to text changes here.
     GoogleAPIClient *googleAPIClient = [GoogleAPIClient sharedProxy];
     [googleAPIClient handleSearchForSearchString:self.autoCompleteTextField.text withCompletionBlock:^(BOOL success, NSArray *places) {
+        
         self.googleAutoCompleteArray = places;
         [self.autoCompleteTableView reloadData];
     }];
@@ -74,7 +82,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"Current Location";
+        cell.textLabel.text = self.googleAutoCompleteArray[indexPath.row];
     } else {
 
     SPGooglePlacesAutocompletePlace *place = self.googleAutoCompleteArray[indexPath.row];
@@ -86,14 +94,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     if (indexPath.row == 0) {
-        // pass in CLL Location stuff
+        self.location.name = @"Current Location";
+        //self.query.latitude =
+//        self.query.longitude;
+    } else {
+    SPGooglePlacesAutocompletePlace *place = self.googleAutoCompleteArray[indexPath.row];
+        self.location.name = place.name;
+        [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
+            self.location.latitude = placemark.location.coordinate.latitude;
+            self.location.longitude = placemark.location.coordinate.longitude;
+        }];
     }
     
-    SPGooglePlacesAutocompletePlace *place = self.googleAutoCompleteArray[indexPath.row];
-    
-    [self.delegate dataFromController:place];
+    [self.delegate dataFromController:self.location.name];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

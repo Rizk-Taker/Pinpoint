@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "SPGooglePlacesAutocompletePlace.h"
+@class PinpointLocation;
 
 @protocol SuggestedLocationsViewControllerDelegate <NSObject>
 
 @required
 
-- (void)dataFromController:(SPGooglePlacesAutocompletePlace *)data;
+- (void)dataFromController:(NSString *)name;
 
 @end
 
 @interface SuggestedLocationsViewController : UIViewController
 
 @property (nonatomic, weak) id<SuggestedLocationsViewControllerDelegate> delegate;
+@property (strong, nonatomic) PinpointLocation *location;
 
 @end

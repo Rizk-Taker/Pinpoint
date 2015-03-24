@@ -14,6 +14,7 @@
 #import "GooglePlace.h"
 #import "Yelpers.h"
 #import "FourSquares.h"
+#import "Pinpoint.h"
 
 @implementation PinpointComparisonHelper
 
@@ -33,54 +34,89 @@
     __block NSArray *googleData = [[NSArray alloc] init];
     __block NSArray *foursquareData = [[NSArray alloc] init];
     
-    NSArray *results = [[NSArray alloc] init];
+    NSMutableArray *results = [[NSMutableArray alloc] init];
     
     self.dataStore = [AggregateDataStore sharedDataStore];
-    [self.dataStore getYelpDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *yelpArray) {
-        yelpData = yelpArray;
-        NSLog(@"I am in Yelp's Data Store");
-    }];
-    
-    
-    [self.dataStore getFourSquareDataWithTerm:term Latitiude:latitude Longitude:longitude CompletionHandler:^(NSArray *fourSquareArray) {
-        foursquareData = fourSquareArray;
-        NSLog(@"I am in Foursquare's data store");
-    }];
-    
     
     [self.dataStore getGoogleDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *googleArray) {
-        googleData = googleArray;
-        NSLog(@"I am in Google Place's data store");
+        
+        [self.dataStore getFourSquareDataWithTerm:term Latitiude:latitude Longitude:longitude CompletionHandler:^(NSArray *fourSquareArray) {
+            
+            [self.dataStore getYelpDataWithTerm:term Latitude:latitude Longitude:longitude CompletionHandler:^(NSArray *yelpArray) {
+                
+                yelpData = yelpArray;
+                NSLog(@"I am in Yelp's Data Store");
+                
+                foursquareData = fourSquareArray;
+                NSLog(@"I am in Foursquare's data store");
+                
+                googleData = googleArray;
+                NSLog(@"I am in Google Place's data store");
+                
+                NSMutableDictionary *pinPointsDictionary = [[NSMutableDictionary alloc] init];
+                
+                
+                for (GooglePlace *googlePlace in googleData) {
+                    Pinpoint *pinpoint = [[Pinpoint alloc] init];
+                    pinpoint.name = googlePlace.name;
+                    pinpoint.openNow = googlePlace.openNow;
+                    pinpoint.googleRating = googlePlace.rating;
+                    pinpoint.googlePriceLevel = googlePlace.priceLevel;
+                    
+                    pinPointsDictionary[pinpoint.name] = [[NSMutableDictionary alloc] initWithDictionary:@{ @"quantity": @1,@"pinpoint": pinpoint}];
+                }
+                
+                for (FourSquares *fourSquarePlace in foursquareData) {
+                    
+                    if (pinPointsDictionary[fourSquarePlace.name]) {
+                        NSInteger quantity = [pinPointsDictionary[fourSquarePlace.name][@"quantity"] integerValue];
+                        
+                        quantity += 1;
+                        
+                        pinPointsDictionary[fourSquarePlace.name][@"quantity"] = @(quantity);
+                        
+                        Pinpoint *pinpoint = pinPointsDictionary[fourSquarePlace.name][@"pinpoint"];
+                        
+                        pinpoint.foursquareRating = fourSquarePlace.rating;
+                        pinpoint.fourSquarePriceLevel = fourSquarePlace.priceLevel;
+                        pinpoint.address = fourSquarePlace.address;
+                        pinpoint.url = [NSURL URLWithString:fourSquarePlace.url];
+                        pinpoint.zipCode = fourSquarePlace.zipCode;
+                        pinpoint.state = fourSquarePlace.state;
+                        pinpoint.city = fourSquarePlace.city;
+                        pinpoint.phoneNumber = fourSquarePlace.phoneNumber;
+                    }
+                }
+                
+                for (Yelpers *yelpPlace in yelpData) {
+                    
+                    if (pinPointsDictionary[yelpPlace.name]) {
+                        NSInteger quantity = [pinPointsDictionary[yelpPlace.name][@"quantity"] integerValue];
+                        
+                        quantity += 1;
+                        
+                        pinPointsDictionary[yelpPlace.name][@"quantity"] = @(quantity);
+                        
+                        Pinpoint *pinpoint = pinPointsDictionary[yelpPlace.name][@"pinpoint"];
+                        
+                        pinpoint.yelpRating = yelpPlace.rating;
+                        pinpoint.image = yelpPlace.image;
+                    }
+                }
+                
+                
+                for (NSString *key in pinPointsDictionary) {
+                    if ([pinPointsDictionary[key][@"quantity"] isEqual:@3]) {
+                        [results addObject:pinPointsDictionary[key][@"pinpoint"]];
+                    }
+                }
+                
+                completionBlock(results);
+            }];
+        }];
     }];
-   
-    for (GooglePlace *googlePlace in googleData) {
-        
-        NSString *googleLatLong = [googlePlace.latitude stringByAppendingString:googlePlace.longitude];
-        
-        NSDictionary *googleDictionary = @{googleLatLong:@0};
-        
-        for (FourSquares *fourSquarePlace in foursquareData) {
-            
-            NSString *fourSquareLatLong = [fourSquarePlace.latitude stringByAppendingString:fourSquarePlace.longitude];
-            
-            if (googleDictionary[fourSquareLatLong]) {
-                [googleDictionary setValue:@1 forKey:fourSquareLatLong];
-            }
-        }
-        
-        for (Yelpers *yelpPlace in yelpData) {
-            NSString *yelpLatLong = [yelpPlace.latitude stringByAppendingString:yelpPlace.longitude];
-            
-            if (googleDictionary[yelpLatLong]) {
-                [googleDictionary setValue:@2 forKey:yelpLatLong];
-            }
-            
-        }
-        
-        
-    }
     
-    completionBlock(results);
+    
     
     
     

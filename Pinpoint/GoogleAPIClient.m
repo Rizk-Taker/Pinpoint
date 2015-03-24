@@ -72,7 +72,7 @@
     
     NSString *latlng = [NSString stringWithFormat:@"%@,%@", latitude, longitude];
     
-    NSDictionary *urlParams = @{@"key":GOOGLE_API_KEY, @"location": latlng, @"keyword":term, @"radius":@"20000"};
+    NSDictionary *urlParams = @{@"key":GOOGLE_API_KEY, @"location": latlng, @"keyword":term, @"radius":@"50000"};
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
@@ -87,7 +87,7 @@
 //            if ([latString hasPrefix:@"-"]) {
 //             latString = [latString substringToIndex:7];
 //            } else {
-            latString = [latString substringToIndex:6];
+            latString = [latString substringToIndex:7];
 //            }
             } else {
                 NSLog(@"Google Lat too short");
@@ -98,12 +98,17 @@
 //            if ([lngString hasPrefix:@"-"]) {
 //                lngString = [latString substringToIndex:7];
 //            } else {
-                lngString = [latString substringToIndex:6];
+                lngString = [lngString substringToIndex:7];
 //            }
             } else {
                 NSLog(@"Google Long too short");
             }
-            GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venue[@"vicinity"] Rating:[NSString stringWithFormat:@"%@", venue[@"rating"]] PriceLevel:[NSString stringWithFormat:@"%@", venue[@"price_level"]] OpenNow:[NSString stringWithFormat:@"%@", venue[@"opening_hours"][@"open_now"]]];
+            NSString *venueVicinity = venue[@"vicinity"];
+            NSString *venueString = [venueVicinity componentsSeparatedByString:@","][0];
+            
+           
+
+            GooglePlace *googleVenue = [[GooglePlace alloc] initWithName:venue[@"name"] Latitude:latString Longitude:lngString Address:venueString Rating:[NSString stringWithFormat:@"%@", venue[@"rating"]] PriceLevel:[NSString stringWithFormat:@"%@", venue[@"price_level"]] OpenNow:[NSString stringWithFormat:@"%@", venue[@"opening_hours"][@"open_now"]]];
             [googleVenues addObject:googleVenue];
         }
         

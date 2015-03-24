@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SearchInputViewController;
 
 @interface ResultsViewController : UIViewController
 
 @property (strong, nonatomic) NSArray *resultsArray;
+@property (strong, nonatomic) NSString *query;
+@property (strong, nonatomic) NSString *lat;
+@property (strong, nonatomic) NSString *lng;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
