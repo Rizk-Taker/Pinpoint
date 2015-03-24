@@ -89,8 +89,6 @@
     resultsVC.query = query;
     
     [resultsVC.myTableView reloadData];
-    
-    
 }
 
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {

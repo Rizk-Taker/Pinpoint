@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PinpointLocation : NSObject
+
 @property (strong,nonatomic) NSString *name;
 @property (nonatomic) CGFloat latitude;
 @property (nonatomic) CGFloat longitude;
