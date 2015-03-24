@@ -20,7 +20,7 @@
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Slice 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="zoY-8R-lgY">
-                    <rect key="frame" x="117" y="279" width="139" height="172"/>
+                    <rect key="frame" x="134" y="279" width="115" height="172"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>

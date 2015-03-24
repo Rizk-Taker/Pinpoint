@@ -11,6 +11,7 @@
 		BC39DF751ABF8DCE00C6A7F3 /* Rectangle 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */; };
 		BC39DF781AC0914800C6A7F3 /* Pinpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BC39DF771AC0914800C6A7F3 /* Pinpoint.m */; };
 		BC39DF7B1AC0D4BB00C6A7F3 /* PinpointLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC39DF7A1AC0D4BB00C6A7F3 /* PinpointLocation.m */; };
+		BC39DF7D1AC1FE7800C6A7F3 /* Triangle 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC39DF7C1AC1FE7800C6A7F3 /* Triangle 2.png */; };
 		BC5E47961AB37F1C00234862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47951AB37F1C00234862 /* AppDelegate.m */; };
 		BC5E47991AB37F1C00234862 /* SearchInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E47981AB37F1C00234862 /* SearchInputViewController.m */; };
 		BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5E479A1AB37F1C00234862 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		BC39DF771AC0914800C6A7F3 /* Pinpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pinpoint.m; sourceTree = "<group>"; };
 		BC39DF791AC0D4BB00C6A7F3 /* PinpointLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinpointLocation.h; sourceTree = "<group>"; };
 		BC39DF7A1AC0D4BB00C6A7F3 /* PinpointLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinpointLocation.m; sourceTree = "<group>"; };
+		BC39DF7C1AC1FE7800C6A7F3 /* Triangle 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triangle 2.png"; sourceTree = "<group>"; };
 		BC5E478D1AB37F1C00234862 /* Pinpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5E47911AB37F1C00234862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5E47941AB37F1C00234862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				BC5E479F1AB37F1C00234862 /* LaunchScreen.xib */,
 				BC5E479A1AB37F1C00234862 /* Main.storyboard */,
+				BC39DF7C1AC1FE7800C6A7F3 /* Triangle 2.png */,
 				BC99B7ED1ABF3D6F000222E9 /* Slice 1.png */,
 				BC39DF741ABF8DCE00C6A7F3 /* Rectangle 1.png */,
 			);
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5E479C1AB37F1C00234862 /* Main.storyboard in Resources */,
+				BC39DF7D1AC1FE7800C6A7F3 /* Triangle 2.png in Resources */,
 				BC5E47A11AB37F1C00234862 /* LaunchScreen.xib in Resources */,
 				BC39DF751ABF8DCE00C6A7F3 /* Rectangle 1.png in Resources */,
 				BC5E479E1AB37F1C00234862 /* Images.xcassets in Resources */,

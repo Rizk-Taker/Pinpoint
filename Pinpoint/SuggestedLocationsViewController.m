@@ -94,21 +94,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        self.location.name = @"Current Location";
-        //self.query.latitude =
-//        self.query.longitude;
+    if (indexPath.row == 0) {        
+        [self.delegate dataFromController:@"Current Location" Latitude:40.7050 Longitude:-74.0136];
+        [self.navigationController popViewControllerAnimated:YES];
     } else {
-    SPGooglePlacesAutocompletePlace *place = self.googleAutoCompleteArray[indexPath.row];
-        self.location.name = place.name;
+    
+        SPGooglePlacesAutocompletePlace *place = self.googleAutoCompleteArray[indexPath.row];
         [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
-            self.location.latitude = placemark.location.coordinate.latitude;
-            self.location.longitude = placemark.location.coordinate.longitude;
+            [self.delegate dataFromController:place.name Latitude:placemark.location.coordinate.latitude Longitude:placemark.location.coordinate.longitude];
+            [self.navigationController popViewControllerAnimated:YES];
         }];
     }
-    
-    [self.delegate dataFromController:self.location.name];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

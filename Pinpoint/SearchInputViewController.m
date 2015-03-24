@@ -49,10 +49,11 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)dataFromController:(NSString *)name {
+- (void)dataFromController:(NSString *)name Latitude:(CGFloat)latitude Longitude:(CGFloat)longitude {
     self.locationTextField.text = name;
-    
-    
+    self.location.name = name;
+    self.location.latitude = latitude;
+    self.location.longitude = longitude;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -60,7 +61,6 @@
     if (textField == self.locationTextField) {
         self.suggestedVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SuggestedLocationsViewController"];
         self.suggestedVC.delegate = self;
-        self.suggestedVC.location = self.location;
         [self.navigationController pushViewController:self.suggestedVC animated:YES];
         
         return NO;

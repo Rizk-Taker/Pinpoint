@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Pinpoint;
 
 @interface ResultDetailViewController : UIViewController
-
+@property (strong, nonatomic) Pinpoint *pinPoint;
 @end

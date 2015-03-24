@@ -277,100 +277,106 @@
                         <viewControllerLayoutGuide type="top" id="b1E-vA-8bw"/>
                         <viewControllerLayoutGuide type="bottom" id="OE5-MO-fRZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C7q-DC-QVz">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="C7q-DC-QVz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-hI-h8x">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-4A-GDU">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-Bu-wea">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-qB-9AC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yelp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtk-en-Svq" userLabel="Yelprating">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm9-D5-Qf1" userLabel="FSprice">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="21" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv8-6Q-FcR" userLabel="GPrating">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-wV-zhS">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-fw-qtW" userLabel="FSrating">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-ft-kmO" userLabel="GPpricelevel">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="24.5" height="20.5"/>
-                                </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Jc-l5C">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ip-Jc-l5C">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open/Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac2-a9-xw1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                <color key="textColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-oN-wiu" userLabel="bottom">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slice 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-qA-pnd" userLabel="logo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.71372550729999995" green="0.47450983520000001" blue="0.8980392814" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.95167220939999997" green="0.96011320690000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gtk-en-Svq" firstAttribute="centerX" secondItem="q0F-qB-9AC" secondAttribute="centerX" multiplier="4.9" id="25Q-0i-rga"/>
-                            <constraint firstItem="c1n-4A-GDU" firstAttribute="centerY" secondItem="Zkt-hI-h8x" secondAttribute="centerY" multiplier="1.2" id="8jb-fu-aUG"/>
+                            <constraint firstItem="Qm9-D5-Qf1" firstAttribute="centerY" secondItem="J1P-ft-kmO" secondAttribute="centerY" multiplier="1.1" id="0xg-Q8-sjF"/>
+                            <constraint firstItem="gtk-en-Svq" firstAttribute="centerX" secondItem="q0F-qB-9AC" secondAttribute="centerX" multiplier="6.9" id="25Q-0i-rga"/>
+                            <constraint firstItem="ed0-qA-pnd" firstAttribute="height" secondItem="aTR-oN-wiu" secondAttribute="height" multiplier="0.8" id="7i1-ZC-cdu"/>
+                            <constraint firstItem="c1n-4A-GDU" firstAttribute="centerY" secondItem="Zkt-hI-h8x" secondAttribute="centerY" multiplier="1.6" id="8jb-fu-aUG"/>
                             <constraint firstItem="q0F-qB-9AC" firstAttribute="centerY" secondItem="f6w-Bu-wea" secondAttribute="centerY" multiplier="1.3" id="8r9-sI-1HN"/>
-                            <constraint firstItem="q0F-qB-9AC" firstAttribute="leading" secondItem="f6w-Bu-wea" secondAttribute="leading" id="KnW-Dy-5WH"/>
-                            <constraint firstItem="yv8-6Q-FcR" firstAttribute="centerX" secondItem="q0F-qB-9AC" secondAttribute="centerX" multiplier="4.9" id="V5a-2m-HCE"/>
-                            <constraint firstItem="6Ip-Jc-l5C" firstAttribute="centerX" secondItem="C7q-DC-QVz" secondAttribute="centerX" id="YOX-vu-s2j">
+                            <constraint firstItem="Sdh-wV-zhS" firstAttribute="centerY" secondItem="q0F-qB-9AC" secondAttribute="centerY" multiplier="1.45" id="Aft-75-ZJ7"/>
+                            <constraint firstItem="aTR-oN-wiu" firstAttribute="bottom" secondItem="OE5-MO-fRZ" secondAttribute="top" id="Cwr-jb-nNA">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="6Ip-Jc-l5C" firstAttribute="width" secondItem="C7q-DC-QVz" secondAttribute="width" id="Zoa-pO-R5j"/>
+                            <constraint firstItem="q0F-qB-9AC" firstAttribute="leading" secondItem="f6w-Bu-wea" secondAttribute="leading" id="KnW-Dy-5WH"/>
+                            <constraint firstItem="ed0-qA-pnd" firstAttribute="centerY" secondItem="aTR-oN-wiu" secondAttribute="centerY" id="LFq-Fo-jxe"/>
+                            <constraint firstItem="yv8-6Q-FcR" firstAttribute="centerX" secondItem="q0F-qB-9AC" secondAttribute="centerX" multiplier="6.9" id="V5a-2m-HCE"/>
+                            <constraint firstItem="ed0-qA-pnd" firstAttribute="centerX" secondItem="aTR-oN-wiu" secondAttribute="centerX" id="VBs-6t-00l"/>
+                            <constraint firstItem="6Ip-Jc-l5C" firstAttribute="centerX" secondItem="C7q-DC-QVz" secondAttribute="centerX" multiplier="1.5" id="YOX-vu-s2j">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="FEa-fw-qtW" firstAttribute="centerY" secondItem="gtk-en-Svq" secondAttribute="centerY" multiplier="1.1" id="amJ-jU-opE">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -378,24 +384,33 @@
                             <constraint firstItem="gtk-en-Svq" firstAttribute="centerY" secondItem="yv8-6Q-FcR" secondAttribute="centerY" multiplier="1.11" id="cVi-hT-Nqp">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="Zkt-hI-h8x" firstAttribute="centerX" secondItem="ac2-a9-xw1" secondAttribute="centerX" multiplier="0.2" id="cYt-Lh-so7"/>
+                            <constraint firstItem="ac2-a9-xw1" firstAttribute="centerX" secondItem="Zkt-hI-h8x" secondAttribute="centerX" multiplier="5.6" id="cYt-Lh-so7"/>
                             <constraint firstItem="FEa-fw-qtW" firstAttribute="centerX" secondItem="gtk-en-Svq" secondAttribute="centerX" id="eZ2-nv-t5W">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="6Ip-Jc-l5C" firstAttribute="width" secondItem="C7q-DC-QVz" secondAttribute="width" multiplier="0.5" id="fEM-ER-MYD"/>
+                            <constraint firstItem="aTR-oN-wiu" firstAttribute="height" secondItem="C7q-DC-QVz" secondAttribute="height" multiplier="0.2" id="fSZ-C8-Ezt"/>
+                            <constraint firstItem="Sdh-wV-zhS" firstAttribute="leading" secondItem="q0F-qB-9AC" secondAttribute="leading" id="fgy-jY-rMk"/>
+                            <constraint firstItem="ed0-qA-pnd" firstAttribute="width" secondItem="aTR-oN-wiu" secondAttribute="width" multiplier="0.2" id="g4M-nE-EdG"/>
+                            <constraint firstItem="aTR-oN-wiu" firstAttribute="width" secondItem="C7q-DC-QVz" secondAttribute="width" multiplier="1.1" id="gfl-6g-i4x"/>
+                            <constraint firstItem="Qm9-D5-Qf1" firstAttribute="centerX" secondItem="J1P-ft-kmO" secondAttribute="centerX" id="h8b-wy-Fhu"/>
                             <constraint firstItem="6Ip-Jc-l5C" firstAttribute="height" secondItem="C7q-DC-QVz" secondAttribute="height" multiplier="0.15" id="hEy-WL-sn0"/>
-                            <constraint firstItem="Zkt-hI-h8x" firstAttribute="centerY" secondItem="C7q-DC-QVz" secondAttribute="centerY" multiplier="0.55" id="hUE-cF-eXV">
+                            <constraint firstItem="Zkt-hI-h8x" firstAttribute="centerY" secondItem="C7q-DC-QVz" secondAttribute="centerY" multiplier="0.35" id="hUE-cF-eXV">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="ac2-a9-xw1" firstAttribute="centerY" secondItem="Zkt-hI-h8x" secondAttribute="centerY" id="iRJ-aQ-f5y"/>
+                            <constraint firstItem="ac2-a9-xw1" firstAttribute="centerY" secondItem="Zkt-hI-h8x" secondAttribute="centerY" multiplier="1.6" id="iRJ-aQ-f5y"/>
                             <constraint firstItem="f6w-Bu-wea" firstAttribute="centerY" secondItem="c1n-4A-GDU" secondAttribute="centerY" multiplier="1.2" id="mhr-H5-TRP"/>
+                            <constraint firstAttribute="centerX" secondItem="aTR-oN-wiu" secondAttribute="centerX" id="o80-KR-pv5"/>
+                            <constraint firstItem="J1P-ft-kmO" firstAttribute="centerX" secondItem="FEa-fw-qtW" secondAttribute="centerX" id="pnx-nK-Fg3"/>
                             <constraint firstItem="c1n-4A-GDU" firstAttribute="leading" secondItem="Zkt-hI-h8x" secondAttribute="leading" id="raZ-kM-kgo"/>
                             <constraint firstItem="6Ip-Jc-l5C" firstAttribute="top" secondItem="b1E-vA-8bw" secondAttribute="bottom" id="s8G-mU-9eJ"/>
-                            <constraint firstItem="Zkt-hI-h8x" firstAttribute="centerX" secondItem="C7q-DC-QVz" secondAttribute="centerX" multiplier="0.3" id="tnu-G5-OQp">
+                            <constraint firstItem="Zkt-hI-h8x" firstAttribute="leading" secondItem="C7q-DC-QVz" secondAttribute="centerX" multiplier="0.05" constant="27" id="tnu-G5-OQp">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="f6w-Bu-wea" firstAttribute="leading" secondItem="c1n-4A-GDU" secondAttribute="leading" id="x20-UX-npf">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="J1P-ft-kmO" firstAttribute="centerY" secondItem="FEa-fw-qtW" secondAttribute="centerY" multiplier="1.25" id="zUR-uc-kee"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -411,20 +426,21 @@
                                 <exclude reference="J1P-ft-kmO"/>
                                 <exclude reference="6Ip-Jc-l5C"/>
                                 <exclude reference="ac2-a9-xw1"/>
+                                <exclude reference="aTR-oN-wiu"/>
+                                <exclude reference="ed0-qA-pnd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="amJ-jU-opE"/>
-                                <exclude reference="YOX-vu-s2j"/>
-                                <exclude reference="Zoa-pO-R5j"/>
-                                <exclude reference="hEy-WL-sn0"/>
-                                <exclude reference="s8G-mU-9eJ"/>
-                                <exclude reference="cYt-Lh-so7"/>
                                 <exclude reference="hUE-cF-eXV"/>
                                 <exclude reference="tnu-G5-OQp"/>
+                                <exclude reference="YOX-vu-s2j"/>
+                                <exclude reference="fEM-ER-MYD"/>
+                                <exclude reference="hEy-WL-sn0"/>
+                                <exclude reference="s8G-mU-9eJ"/>
                                 <exclude reference="8jb-fu-aUG"/>
                                 <exclude reference="raZ-kM-kgo"/>
                                 <exclude reference="mhr-H5-TRP"/>
                                 <exclude reference="x20-UX-npf"/>
+                                <exclude reference="cYt-Lh-so7"/>
                                 <exclude reference="iRJ-aQ-f5y"/>
                                 <exclude reference="8r9-sI-1HN"/>
                                 <exclude reference="KnW-Dy-5WH"/>
@@ -432,7 +448,22 @@
                                 <exclude reference="cMU-kb-QlW"/>
                                 <exclude reference="25Q-0i-rga"/>
                                 <exclude reference="cVi-hT-Nqp"/>
+                                <exclude reference="amJ-jU-opE"/>
                                 <exclude reference="eZ2-nv-t5W"/>
+                                <exclude reference="Aft-75-ZJ7"/>
+                                <exclude reference="fgy-jY-rMk"/>
+                                <exclude reference="pnx-nK-Fg3"/>
+                                <exclude reference="zUR-uc-kee"/>
+                                <exclude reference="0xg-Q8-sjF"/>
+                                <exclude reference="h8b-wy-Fhu"/>
+                                <exclude reference="Cwr-jb-nNA"/>
+                                <exclude reference="fSZ-C8-Ezt"/>
+                                <exclude reference="gfl-6g-i4x"/>
+                                <exclude reference="o80-KR-pv5"/>
+                                <exclude reference="7i1-ZC-cdu"/>
+                                <exclude reference="LFq-Fo-jxe"/>
+                                <exclude reference="VBs-6t-00l"/>
+                                <exclude reference="g4M-nE-EdG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -449,20 +480,21 @@
                                 <include reference="J1P-ft-kmO"/>
                                 <include reference="6Ip-Jc-l5C"/>
                                 <include reference="ac2-a9-xw1"/>
+                                <include reference="aTR-oN-wiu"/>
+                                <include reference="ed0-qA-pnd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="amJ-jU-opE"/>
-                                <include reference="YOX-vu-s2j"/>
-                                <include reference="Zoa-pO-R5j"/>
-                                <include reference="hEy-WL-sn0"/>
-                                <include reference="s8G-mU-9eJ"/>
-                                <include reference="cYt-Lh-so7"/>
                                 <include reference="hUE-cF-eXV"/>
                                 <include reference="tnu-G5-OQp"/>
+                                <include reference="YOX-vu-s2j"/>
+                                <include reference="fEM-ER-MYD"/>
+                                <include reference="hEy-WL-sn0"/>
+                                <include reference="s8G-mU-9eJ"/>
                                 <include reference="8jb-fu-aUG"/>
                                 <include reference="raZ-kM-kgo"/>
                                 <include reference="mhr-H5-TRP"/>
                                 <include reference="x20-UX-npf"/>
+                                <include reference="cYt-Lh-so7"/>
                                 <include reference="iRJ-aQ-f5y"/>
                                 <include reference="8r9-sI-1HN"/>
                                 <include reference="KnW-Dy-5WH"/>
@@ -470,10 +502,37 @@
                                 <include reference="cMU-kb-QlW"/>
                                 <include reference="25Q-0i-rga"/>
                                 <include reference="cVi-hT-Nqp"/>
+                                <include reference="amJ-jU-opE"/>
                                 <include reference="eZ2-nv-t5W"/>
+                                <include reference="Aft-75-ZJ7"/>
+                                <include reference="fgy-jY-rMk"/>
+                                <include reference="pnx-nK-Fg3"/>
+                                <include reference="zUR-uc-kee"/>
+                                <include reference="0xg-Q8-sjF"/>
+                                <include reference="h8b-wy-Fhu"/>
+                                <include reference="Cwr-jb-nNA"/>
+                                <include reference="fSZ-C8-Ezt"/>
+                                <include reference="gfl-6g-i4x"/>
+                                <include reference="o80-KR-pv5"/>
+                                <include reference="7i1-ZC-cdu"/>
+                                <include reference="LFq-Fo-jxe"/>
+                                <include reference="VBs-6t-00l"/>
+                                <include reference="g4M-nE-EdG"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="foursquarePrice" destination="Qm9-D5-Qf1" id="c6f-Nh-aFu"/>
+                        <outlet property="foursquareRating" destination="FEa-fw-qtW" id="fsh-UM-YQI"/>
+                        <outlet property="googlePrice" destination="J1P-ft-kmO" id="Fml-bm-ldw"/>
+                        <outlet property="googleRating" destination="yv8-6Q-FcR" id="aeg-e1-ByE"/>
+                        <outlet property="openOrClosed" destination="ac2-a9-xw1" id="j8J-2D-cA9"/>
+                        <outlet property="venueAddress" destination="c1n-4A-GDU" id="edy-Nc-q4k"/>
+                        <outlet property="venueImage" destination="6Ip-Jc-l5C" id="RFL-o5-wtF"/>
+                        <outlet property="venueName" destination="Zkt-hI-h8x" id="JzY-yV-Dvw"/>
+                        <outlet property="venuePhone" destination="f6w-Bu-wea" id="Neb-gO-1WO"/>
+                        <outlet property="yelpRating" destination="gtk-en-Svq" id="GO6-nM-SPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMz-2j-Aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

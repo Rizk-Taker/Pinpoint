@@ -13,6 +13,7 @@
 #import "SearchInputViewController.h"
 #import "Pinpoint.h"
 #import "PinpointComparisonHelper.h"
+#import "ResultDetailViewController.h"
 
 @interface ResultsViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -36,7 +37,11 @@
         
         if ([pinPointArray count] > 0) {
             self.resultsArray = pinPointArray;
-            [self.myTableView reloadData];
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self.myTableView reloadData];
+            }];
+            
         } else {
             
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"No results found" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -53,6 +58,7 @@
         }
         
     }];
+    [self.myTableView reloadData];
 }
 
 
@@ -81,7 +87,7 @@
     Pinpoint *pinpoint = self.resultsArray[indexPath.row];
     cell.textLabel.text = pinpoint.name;
     
-    // Configure the cell...
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
 }
@@ -121,14 +127,23 @@
  */
 
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     ResultDetailViewController *resultDetailVC = segue.destinationViewController;
+     
+     NSIndexPath *ip = [self.myTableView indexPathForSelectedRow];
+     
+     Pinpoint *pinPointToPass = self.resultsArray[ip.row];
+     
+     resultDetailVC.pinPoint = pinPointToPass;
+     
+     
  }
- */
+
 
 @end

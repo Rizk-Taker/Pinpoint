@@ -14,13 +14,12 @@
 
 @required
 
-- (void)dataFromController:(NSString *)name;
+- (void)dataFromController:(NSString *)name Latitude:(CGFloat)latitude Longitude:(CGFloat)longitude;
 
 @end
 
 @interface SuggestedLocationsViewController : UIViewController
 
 @property (nonatomic, weak) id<SuggestedLocationsViewControllerDelegate> delegate;
-@property (strong, nonatomic) PinpointLocation *location;
 
 @end
